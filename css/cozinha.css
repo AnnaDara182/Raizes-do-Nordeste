@@ -1,0 +1,481 @@
+
+/* =========================================
+   PAINEL DA COZINHA
+   Raízes do Nordeste
+========================================= */
+
+/* Estrutura geral */
+
+.pagina {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px 18px 32px;
+}
+
+.cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 18px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--borda);
+}
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+}
+
+.identificacao-cozinha {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: var(--texto-suave);
+    font-size: 14px;
+}
+
+.indicador-online {
+    width: 9px;
+    height: 9px;
+    background: var(--verde-claro);
+    border-radius: 50%;
+}
+
+/* Introdução */
+
+.introducao {
+    margin: 30px 0 24px;
+}
+
+.texto-superior {
+    margin: 0 0 8px;
+    color: var(--verde-claro);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+}
+
+.introducao h1 {
+    margin: 0;
+    color: var(--verde);
+    font-size: clamp(26px, 5vw, 34px);
+    line-height: 1.2;
+}
+
+.texto-descricao {
+    max-width: 560px;
+    margin: 10px 0 0;
+    color: var(--texto-suave);
+    font-size: 14px;
+}
+
+/* Resumo */
+
+.resumo-pedidos {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-bottom: 32px;
+}
+
+.cartao-resumo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    min-width: 0;
+    padding: 18px;
+    background: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 15px;
+}
+
+.resumo-icone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 43px;
+    height: 43px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background: var(--fundo);
+    color: var(--verde);
+    font-size: 23px;
+}
+
+.cartao-resumo p {
+    margin: 0 0 3px;
+    color: var(--texto-suave);
+    font-size: 13px;
+}
+
+.cartao-resumo strong {
+    display: block;
+    color: var(--verde);
+    font-size: 25px;
+    line-height: 1.3;
+}
+
+.descricao-resumo {
+    display: block;
+    margin-top: 3px;
+    color: var(--texto-suave);
+    font-size: 11px;
+}
+
+/* Lista de pedidos */
+
+.secao-pedidos {
+    padding: 22px;
+    background: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 18px;
+}
+
+.cabecalho-lista h2 {
+    margin: 0;
+    color: var(--verde);
+    font-size: 21px;
+}
+
+.cabecalho-lista p {
+    margin: 7px 0 0;
+    color: var(--texto-suave);
+    font-size: 13px;
+}
+
+/* Filtros */
+
+.filtros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 22px 0;
+}
+
+.filtro {
+    padding: 9px 14px;
+    background: transparent;
+    color: var(--texto-suave);
+    border: 1px solid var(--borda);
+    border-radius: 20px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.filtro:hover {
+    background: var(--fundo);
+    color: var(--verde);
+}
+
+.filtro.ativo {
+    background: var(--verde);
+    color: var(--branco);
+    border-color: var(--verde);
+}
+
+.filtro:focus-visible,
+.botao-status:focus-visible,
+.botao-secundario:focus-visible {
+    outline: 2px solid var(--verde-claro);
+    outline-offset: 3px;
+}
+
+/* Cartão individual do pedido */
+
+.lista-pedidos {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+.cartao-pedido {
+    min-width: 0;
+    padding: 18px;
+    background: #FFFEFB;
+    border: 1px solid var(--borda);
+    border-radius: 14px;
+}
+
+.cabecalho-pedido {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--borda);
+}
+
+.rotulo-pedido {
+    margin: 0 0 4px;
+    color: var(--texto-suave);
+    font-size: 11px;
+}
+
+.numero-pedido {
+    margin: 0;
+    color: var(--verde);
+    font-size: 22px;
+}
+
+.etiqueta-status {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 10px;
+    background: var(--fundo);
+    color: var(--texto-suave);
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.etiqueta-status.preparando {
+    background: var(--amarelo);
+    color: #70551E;
+}
+
+.etiqueta-status.pronto {
+    background: var(--verde-suave);
+    color: var(--verde);
+}
+
+.etiqueta-status.retirado {
+    background: var(--bege);
+    color: var(--verde);
+}
+
+.observacao-item {
+    margin: 8px 0 0;
+    color: var(--texto-suave);
+    font-size: 12px;
+    overflow-wrap: anywhere;
+}
+
+/* Produtos do pedido */
+
+.titulo-itens {
+    margin: 17px 0 10px;
+    color: var(--texto);
+    font-size: 14px;
+}
+
+.lista-itens {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.item-pedido {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #F0E9DE;
+}
+
+.nome-item {
+    min-width: 0;
+}
+
+.nome-item p {
+    margin: 0;
+    color: var(--texto);
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+.nome-item .observacao-item {
+    margin-top: 4px;
+    font-size: 11px;
+}
+
+.quantidade-item {
+    flex-shrink: 0;
+    color: var(--verde);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* Ações do pedido */
+
+.acoes-pedido {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-top: 18px;
+}
+
+.botao-status,
+.botao-secundario {
+    min-height: 42px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.botao-status {
+    flex: 1;
+    background: var(--verde);
+    color: var(--branco);
+    border: 1px solid var(--verde);
+}
+
+.botao-status:hover:not(:disabled) {
+    background: var(--verde-claro);
+}
+
+.botao-status:disabled {
+    background: var(--verde-suave);
+    color: var(--verde);
+    border-color: var(--verde-suave);
+    cursor: default;
+}
+
+.botao-secundario {
+    background: transparent;
+    color: var(--texto-suave);
+    border: 1px solid var(--borda);
+}
+
+.botao-secundario:hover {
+    background: var(--fundo);
+    color: var(--verde);
+}
+
+/* Estado vazio */
+
+.mensagem-vazia {
+    padding: 34px 15px;
+    text-align: center;
+}
+
+.mensagem-vazia[hidden] {
+    display: none;
+}
+
+.icone-vazio {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: var(--verde-suave);
+    color: var(--verde);
+    border-radius: 50%;
+    font-size: 20px;
+}
+
+.mensagem-vazia h2 {
+    margin: 13px 0 5px;
+    color: var(--verde);
+    font-size: 18px;
+}
+
+.mensagem-vazia p {
+    margin: 0;
+    color: var(--texto-suave);
+    font-size: 13px;
+}
+
+/* Rodapé */
+
+.rodape {
+    padding: 24px 0 0;
+    color: var(--texto-suave);
+    text-align: center;
+    font-size: 11px;
+}
+
+/* Tablet */
+
+@media (min-width: 600px) {
+    .pagina {
+        padding: 30px 24px 36px;
+    }
+
+    .resumo-pedidos {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .cartao-resumo {
+        padding: 15px;
+    }
+
+    .secao-pedidos {
+        padding: 26px;
+    }
+}
+
+/* Computador */
+
+@media (min-width: 900px) {
+    .pagina {
+        padding-top: 35px;
+    }
+
+    .lista-pedidos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+/* =========================================
+   SELETOR DE UNIDADE DA COZINHA
+   Mantém o mesmo padrão visual do projeto.
+========================================= */
+.seletor-unidade-admin {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7px;
+    width: min(100%, 360px);
+    margin: 14px 0 20px;
+}
+
+.seletor-unidade-admin label {
+    display: block;
+    color: var(--verde);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.seletor-unidade-admin select {
+    display: block;
+    width: 100%;
+    min-height: 44px;
+    padding: 10px 40px 10px 13px;
+    border: 1px solid var(--borda);
+    border-radius: 10px;
+    background-color: var(--branco);
+    color: var(--texto);
+    font: inherit;
+    line-height: 1.4;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(33, 72, 43, 0.04);
+}
+
+.seletor-unidade-admin select:hover {
+    border-color: var(--verde-claro);
+}
+
+.seletor-unidade-admin select:focus-visible {
+    outline: 2px solid var(--verde-claro);
+    outline-offset: 2px;
+}
+
+@media (max-width: 480px) {
+    .seletor-unidade-admin {
+        width: 100%;
+    }
+}

@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pagamento externo | Raízes do Nordeste</title>
+
+    <!-- Paleta de cores compartilhada -->
+    <link rel="stylesheet" href="css/tema.css">
+
+    <!-- Estilos do pagamento -->
+    <link rel="stylesheet" href="css/pagamento.css">
+
+    <!-- Tamanho compartilhado da logo -->
+    <link rel="stylesheet" href="css/logo.css">
+
+    <!-- Funcionalidades do pagamento -->
+    <script src="js/auth.js" defer></script>
+    <script src="js/pagamento.js" defer></script>
+</head>
+
+<body>
+
+    <main class="pagina">
+
+
+<!-- Cabeçalho com a imagem da logo -->
+<header class="cabecalho">
+
+    <a href="index.html" class="logo" aria-label="Raízes do Nordeste - Início">
+
+        <!-- Imagem da logo do restaurante -->
+        <img
+            src="imagens/logo-raizes-nordeste.png"
+            alt="Raízes do Nordeste — Sabores que aproximam"
+            class="imagem-logo"
+        >
+
+    </a>
+
+</header>
+
+
+        <!-- Aviso sobre o pagamento externo -->
+        <section class="conteudo">
+
+            <div class="icone-seguranca" aria-hidden="true">
+                <span>🔒</span>
+            </div>
+
+            <h1>Pagamento externo</h1>
+
+            <p class="mensagem-principal">
+                Você será direcionado para um ambiente
+                seguro de pagamento!
+            </p>
+
+            <p class="explicacao">
+                Seus dados de pagamento serão tratados
+                pelo serviço responsável pela transação.
+            </p>
+
+            <!-- Área de simulação para os testes do protótipo -->
+            <section class="area-simulacao" aria-labelledby="titulo-simulacao">
+
+                <h2 id="titulo-simulacao">Modo de demonstração</h2>
+
+                <p>
+                    Escolha um resultado para simular o retorno do pagamento.
+                    Nenhuma transação real será realizada.
+                </p>
+
+                <!-- Opções de resultado do pagamento -->
+                <label for="resultado-pagamento">Resultado da simulação</label>
+
+                <select id="resultado-pagamento">
+                    <option value="aprovado">Pagamento aprovado</option>
+                    <option value="recusado">Pagamento recusado</option>
+                    <option value="indisponivel">Serviço indisponível</option>
+                </select>
+
+                <!-- O JavaScript controla a continuação -->
+                <button
+                    type="button"
+                    id="continuar-pagamento"
+                    class="botao-principal"
+                >
+                    Simular pagamento
+                </button>
+
+            </section>
+            
+            <a href="revisao.html" class="link-voltar">
+                Voltar à revisão do pedido
+            </a>
+
+        </section>
+
+        <!-- Aviso visual do protótipo -->
+        <footer class="rodape">
+            Seus dados devem ser protegidos durante o pagamento.
+        </footer>
+
+    </main>
+
+</body>
+</html>

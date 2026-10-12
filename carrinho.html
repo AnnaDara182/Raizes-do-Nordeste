@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Meu carrinho | Raízes do Nordeste</title>
+
+    <!-- Estilos compartilhados -->
+    <link rel="stylesheet" href="css/tema.css">
+    <link rel="stylesheet" href="css/carrinho.css">
+    <link rel="stylesheet" href="css/menu-inferior.css">
+    <link rel="stylesheet" href="css/logo.css">
+
+    <!-- Scripts da página -->
+    <script src="js/auth.js" defer></script>
+    <script src="js/utilitarios.js" defer></script>
+    <script src="js/carrinho.js" defer></script>
+    <script src="js/menu-inferior.js" defer></script>
+</head>
+
+<body>
+
+    <main class="pagina">
+
+        <!-- Cabeçalho com botão de voltar e logo -->
+        <header class="cabecalho">
+
+            <a href="cardapio.html" class="link-voltar">
+                ← Voltar
+            </a>
+
+            <a href="index.html" class="logo" aria-label="Raízes do Nordeste - Início">
+                <img
+                    src="imagens/logo-raizes-nordeste.png"
+                    alt="Raízes do Nordeste — Sabores que aproximam"
+                    class="imagem-logo"
+                >
+            </a>
+
+        </header>
+
+        <h1 class="titulo-pagina">Meu carrinho</h1>
+
+        <!-- Mensagem exibida quando não há produtos -->
+        <section id="carrinho-vazio" class="carrinho-vazio" hidden>
+
+            <p>Seu carrinho está vazio.</p>
+
+            <a href="cardapio.html" class="link-cardapio">
+                Conhecer o cardápio
+            </a>
+
+        </section>
+
+        <!-- Produtos adicionados ao carrinho -->
+        <section
+            id="lista-carrinho"
+            class="lista-carrinho"
+            aria-label="Produtos adicionados ao carrinho"
+        ></section>
+
+        <!-- Resumo dos valores -->
+        <section id="resumo-carrinho" class="resumo-carrinho">
+
+            <div class="linha-valor">
+                <span>Subtotal</span>
+                <span id="valor-subtotal">R$ 0,00</span>
+            </div>
+
+            <div class="linha-valor">
+                <span>Frete</span>
+                <span id="valor-frete">R$ 0,00</span>
+            </div>
+
+            <div class="linha-valor total">
+                <span>Total</span>
+                <span id="valor-total">R$ 0,00</span>
+            </div>
+
+            <p class="aviso-retirada">
+                Pedido para retirada na unidade selecionada.
+            </p>
+
+        </section>
+
+        <!-- Ações disponíveis para o cliente -->
+        <div id="acoes-carrinho" class="acoes-carrinho">
+
+            <a href="cardapio.html" class="botao-secundario">
+                Continuar pedindo
+            </a>
+
+            <button
+                type="button"
+                id="finalizar-pedido"
+                class="botao-principal"
+            >
+                Finalizar o pedido
+            </button>
+
+        </div>
+
+    </main>
+
+</body>
+</html>

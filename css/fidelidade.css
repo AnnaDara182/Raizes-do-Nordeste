@@ -1,0 +1,500 @@
+/* =========================================
+   1. CONFIGURAÇÕES GERAIS
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--fundo);
+    color: var(--texto);
+    line-height: 1.5;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid rgba(33, 72, 43, 0.25);
+    outline-offset: 3px;
+}
+
+/* =========================================
+   2. ESTRUTURA DA PÁGINA
+========================================= */
+
+.pagina {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 16px 16px 28px;
+}
+
+/* =========================================
+   3. CABEÇALHO E LOGO
+========================================= */
+
+.cabecalho {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 0 22px;
+}
+
+.cabecalho .logo {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.imagem-logo {
+    display: block;
+    width: 190px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* =========================================
+   4. CARTÃO PRINCIPAL
+========================================= */
+
+.conteudo {
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 24px 20px;
+    border: 1px solid var(--borda);
+    border-radius: 20px;
+    background-color: var(--branco);
+    box-shadow: var(--sombra);
+}
+
+/* =========================================
+   5. INTRODUÇÃO
+========================================= */
+
+.introducao-fidelidade {
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.etiqueta-fidelidade {
+    display: inline-block;
+    margin-bottom: 8px;
+    color: var(--terracota);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+}
+
+.introducao-fidelidade h1 {
+    margin: 0 0 10px;
+    color: var(--verde);
+    font-size: clamp(25px, 5vw, 32px);
+    line-height: 1.25;
+}
+
+.descricao {
+    max-width: 470px;
+    margin: 0 auto;
+    color: var(--texto-suave);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* =========================================
+   6. CARTÃO DE PONTOS
+========================================= */
+
+.cartao-pontos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto 28px;
+    padding: 25px 18px;
+    border: 1px solid var(--borda);
+    border-radius: 17px;
+    background-color: #F7F5EB;
+    text-align: center;
+}
+
+/* Ícone de estrela */
+
+.icone-pontos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 13px;
+    border-radius: 14px;
+    background-color: var(--verde-suave);
+    color: var(--verde);
+    font-size: 27px;
+}
+
+/* Texto acima do saldo */
+
+.rotulo-pontos {
+    margin: 0;
+    color: var(--texto-suave);
+    font-size: 14px;
+}
+
+/* Número e unidade de pontos */
+
+.valor-pontos {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 3px;
+}
+
+.valor-pontos strong {
+    color: var(--verde);
+    font-size: clamp(42px, 10vw, 54px);
+    line-height: 1.25;
+    font-weight: 700;
+    overflow-wrap: anywhere;
+}
+
+.valor-pontos span {
+    color: var(--verde);
+    font-size: 14px;
+}
+
+/* Separador visual */
+
+.separador-pontos {
+    width: 100%;
+    max-width: 270px;
+    height: 1px;
+    margin: 18px 0;
+    background-color: var(--borda);
+}
+
+/* Benefício principal */
+
+.beneficio-pontos {
+    margin: 0;
+    color: var(--verde);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.6;
+}
+
+.beneficio-pontos span {
+    color: var(--terracota);
+}
+
+/* Regra de resgate */
+
+.aviso-resgate {
+    margin: 7px 0 0;
+    color: var(--texto-suave);
+    font-size: 12px;
+}
+
+/* =========================================
+   7. COMO FUNCIONA
+========================================= */
+
+.informacoes-fidelidade {
+    margin-bottom: 26px;
+}
+
+.informacoes-fidelidade > h2 {
+    margin: 0 0 15px;
+    color: var(--verde);
+    font-size: 19px;
+    line-height: 1.35;
+}
+
+.regra-fidelidade {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-top: 12px;
+    padding: 14px;
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+    background-color: var(--branco);
+}
+
+.icone-regra {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background-color: var(--verde-suave);
+    color: var(--verde);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.regra-fidelidade h3 {
+    margin: 0 0 4px;
+    color: var(--texto);
+    font-size: 14px;
+}
+
+.regra-fidelidade p {
+    margin: 0;
+    color: var(--texto-suave);
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+/* =========================================
+   8. BOTÕES DE AÇÃO
+========================================= */
+
+.acoes-fidelidade {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    width: 100%;
+    max-width: 390px;
+    margin: 0 auto;
+}
+
+.botao-principal,
+.botao-secundario {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 49px;
+    padding: 13px 18px;
+    border: 1px solid transparent;
+    border-radius: 11px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+/* Ação principal */
+
+.botao-principal {
+    background-color: var(--verde);
+    color: #FFFFFF;
+}
+
+.botao-principal:hover {
+    background-color: var(--verde-claro);
+}
+
+.botao-principal:active,
+.botao-secundario:active {
+    transform: scale(0.99);
+}
+
+/* Ação secundária */
+
+.botao-secundario {
+    border-color: var(--borda);
+    background-color: var(--branco);
+    color: var(--verde);
+}
+
+.botao-secundario:hover {
+    border-color: var(--verde);
+    background-color: var(--verde-suave);
+}
+
+/* =========================================
+   9. MENSAGEM DINÂMICA
+========================================= */
+
+.mensagem-fidelidade {
+    max-width: 390px;
+    margin: 16px auto 0;
+    padding: 0;
+    border-radius: 10px;
+    color: var(--texto-suave);
+    font-size: 13px;
+    line-height: 1.7;
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+.mensagem-fidelidade:not(:empty) {
+    padding: 13px;
+    border: 1px solid var(--borda);
+    background-color: #F7F5EB;
+}
+
+.mensagem-fidelidade:empty {
+    display: none;
+}
+
+/* =========================================
+   10. RODAPÉ
+========================================= */
+
+.rodape {
+    margin-top: auto;
+    padding: 25px 0 8px;
+    color: var(--texto-suave);
+    font-size: 11px;
+    line-height: 1.7;
+    text-align: center;
+}
+
+.rodape p {
+    margin: 0;
+}
+
+.rodape a {
+    display: inline-block;
+    margin-top: 5px;
+    color: var(--verde);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* =========================================
+   11. TABLETS E DESKTOP
+========================================= */
+
+@media (min-width: 600px) {
+    .pagina {
+        padding: 20px 24px 32px;
+    }
+
+    .cabecalho {
+        padding-bottom: 28px;
+    }
+
+    .imagem-logo {
+        width: 220px;
+    }
+
+    .conteudo {
+        padding: 32px;
+    }
+
+    .introducao-fidelidade {
+        margin-bottom: 28px;
+    }
+
+    .descricao {
+        font-size: 15px;
+    }
+
+    .cartao-pontos {
+        max-width: 390px;
+        padding: 30px 24px;
+    }
+
+    .beneficio-pontos {
+        font-size: 15px;
+    }
+
+    .regra-fidelidade {
+        padding: 16px;
+    }
+
+    .regra-fidelidade h3 {
+        font-size: 15px;
+    }
+
+    .regra-fidelidade p {
+        font-size: 13px;
+    }
+
+    .botao-principal,
+    .botao-secundario {
+        font-size: 15px;
+    }
+}
+
+/* =========================================
+   12. CELULARES ESTREITOS
+========================================= */
+
+@media (max-width: 360px) {
+    .pagina {
+        padding: 10px 10px 24px;
+    }
+
+    .imagem-logo {
+        width: 170px;
+    }
+
+    .conteudo {
+        padding: 20px 14px;
+        border-radius: 16px;
+    }
+
+    .introducao-fidelidade h1 {
+        font-size: 24px;
+    }
+
+    .descricao {
+        font-size: 13px;
+    }
+
+    .cartao-pontos {
+        padding: 22px 12px;
+    }
+
+    .beneficio-pontos {
+        font-size: 12px;
+    }
+
+    .regra-fidelidade {
+        gap: 9px;
+        padding: 11px;
+    }
+
+    .regra-fidelidade p {
+        font-size: 11px;
+    }
+}
+
+/* =========================================
+   13. ACESSIBILIDADE
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}

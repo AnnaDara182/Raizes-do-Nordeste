@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Personalizar prato | Raízes do Nordeste</title>
+
+    <!-- Estilos compartilhados do projeto -->
+    <link rel="stylesheet" href="css/tema.css">
+    <link rel="stylesheet" href="css/personalizar.css">
+    <link rel="stylesheet" href="css/menu-inferior.css">
+    <link rel="stylesheet" href="css/logo.css">
+
+    <!-- Funcionalidades da página -->
+    <script src="js/auth.js" defer></script>
+    <script src="js/utilitarios.js" defer></script>
+    <script src="js/personalizar.js" defer></script>
+    <script src="js/menu-inferior.js" defer></script>
+</head>
+
+<body>
+
+    <main class="pagina">
+
+        <!-- Cabeçalho com botão de voltar e logo -->
+        <header class="cabecalho">
+
+            <a href="cardapio.html" class="link-voltar">
+                ← Voltar
+            </a>
+
+            <a href="index.html" class="logo" aria-label="Raízes do Nordeste - Início">
+                <img
+                    src="imagens/logo-raizes-nordeste.png"
+                    alt="Raízes do Nordeste — Sabores que aproximam"
+                    class="imagem-logo"
+                >
+            </a>
+
+        </header>
+
+        <!-- Informações do prato escolhido no cardápio -->
+        <section class="produto" aria-labelledby="nome-prato">
+
+            <img
+                id="imagem-prato"
+                class="imagem-prato"
+                src=""
+                alt=""
+            >
+
+            <h1 id="nome-prato">Carregando prato...</h1>
+
+            <p id="preco-prato" class="preco-prato"></p>
+
+        </section>
+
+        <!-- Formulário para personalizar o prato -->
+        <form id="form-personalizacao">
+
+            <section class="secao-personalizacao">
+
+                <h2>Personalize seu pedido</h2>
+
+                <p class="descricao">
+                    Escolha os adicionais que deseja incluir no seu prato.
+                </p>
+
+                <!-- Os adicionais são criados pelo JavaScript -->
+                <div id="lista-adicionais" class="lista-adicionais"></div>
+
+                <!-- Campo para informar ingredientes que devem ser retirados -->
+                <div class="campo-retirar">
+
+                    <label for="ingredientes-retirar">
+                        Retirar ingredientes
+                    </label>
+
+                    <textarea
+                        id="ingredientes-retirar"
+                        name="ingredientes-retirar"
+                        placeholder="Ex.: sem cebola, sem coentro..."
+                        rows="3"
+                    ></textarea>
+
+                </div>
+
+            </section>
+
+            <!-- Resumo atualizado automaticamente -->
+            <section class="resumo" aria-label="Resumo do preço">
+
+                <p>
+                    <span>Preço do prato:</span>
+                    <span id="valor-base">R$ 0,00</span>
+                </p>
+
+                <p>
+                    <span>Adicionais:</span>
+                    <span id="valor-adicionais">R$ 0,00</span>
+                </p>
+
+                <p class="total">
+                    <span>Total por unidade:</span>
+                    <span id="valor-total">R$ 0,00</span>
+                </p>
+
+            </section>
+
+            <!-- Botão para adicionar o prato ao carrinho -->
+            <button type="submit" class="botao-principal">
+                Adicionar ao carrinho
+            </button>
+
+            <!-- Mensagens de retorno para o cliente -->
+            <p id="mensagem" class="mensagem" role="status" aria-live="polite"></p>
+
+        </form>
+
+    </main>
+
+</body>
+</html>

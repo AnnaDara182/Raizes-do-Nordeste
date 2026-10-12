@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Adapta a página a celulares, tablets e computadores -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Minha fidelidade | Raízes do Nordeste</title>
+
+    <!-- Identidade visual compartilhada -->
+    <link rel="stylesheet" href="css/tema.css">
+    <link rel="stylesheet" href="css/fidelidade.css">
+    <link rel="stylesheet" href="css/menu-inferior.css">
+    <link rel="stylesheet" href="css/logo.css">
+
+    <!-- Verificação de login e funções compartilhadas -->
+    <script src="js/auth.js" defer></script>
+    <script src="js/utilitarios.js" defer></script>
+
+    <!-- Lógica específica da fidelidade -->
+    <script src="js/fidelidade.js" defer></script>
+
+    <!-- Menu inferior compartilhado -->
+    <script src="js/menu-inferior.js" defer></script>
+</head>
+
+<body>
+
+    <main class="pagina">
+
+        <!-- Cabeçalho com a logo do restaurante -->
+        <header class="cabecalho">
+
+            <a
+                href="index.html"
+                class="logo"
+                aria-label="Raízes do Nordeste - Página inicial"
+            >
+                <img
+                    src="imagens/logo-raizes-nordeste.png"
+                    alt="Raízes do Nordeste — Sabores que aproximam"
+                    class="imagem-logo"
+                >
+            </a>
+
+        </header>
+
+        <!-- Conteúdo principal da fidelidade -->
+        <section class="conteudo" aria-labelledby="titulo-fidelidade">
+
+            <!-- Introdução -->
+            <div class="introducao-fidelidade">
+
+                <span class="etiqueta-fidelidade">
+                    PROGRAMA DE FIDELIDADE
+                </span>
+
+                <h1 id="titulo-fidelidade">Minha fidelidade</h1>
+
+                <p class="descricao">
+                    Cada pedido é uma oportunidade de ganhar benefícios.
+                    Acumule pontos e aproveite descontos especiais.
+                </p>
+
+            </div>
+
+            <!-- Cartão com o saldo atual do cliente -->
+            <section
+                class="cartao-pontos"
+                aria-labelledby="titulo-pontos"
+            >
+
+                <div class="icone-pontos" aria-hidden="true">
+                    ★
+                </div>
+
+                <p id="titulo-pontos" class="rotulo-pontos">
+                    Seu saldo disponível
+                </p>
+
+                <div class="valor-pontos">
+                    <strong id="saldo-pontos" aria-live="polite">0</strong>
+                    <span>pontos</span>
+                </div>
+
+                <div class="separador-pontos"></div>
+
+                <p class="beneficio-pontos">
+                    <span aria-hidden="true">✦</span>
+                    100 pontos = R$ 5,00 de desconto
+                </p>
+
+                <p class="aviso-resgate">
+                    Resgate mínimo de 100 pontos
+                </p>
+
+            </section>
+
+            <!-- Explicação das regras do programa -->
+            <section
+                class="informacoes-fidelidade"
+                aria-labelledby="titulo-como-funciona"
+            >
+
+                <h2 id="titulo-como-funciona">
+                    Como funciona?
+                </h2>
+
+                <div class="regra-fidelidade">
+
+                    <span class="icone-regra" aria-hidden="true">
+                        +
+                    </span>
+
+                    <div>
+                        <h3>Acumule pontos</h3>
+                        <p>
+                            Ganhe 1 ponto a cada R$ 1,00 pago
+                            em pedidos com pagamento aprovado.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="regra-fidelidade">
+
+                    <span class="icone-regra" aria-hidden="true">
+                        %
+                    </span>
+
+                    <div>
+                        <h3>Troque por descontos</h3>
+                        <p>
+                            Junte pelo menos 100 pontos para
+                            conseguir R$ 5,00 de desconto.
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- Ações disponíveis -->
+            <div class="acoes-fidelidade">
+
+                <button
+                    type="button"
+                    id="botao-usar-pontos"
+                    class="botao-principal"
+                >
+                    Usar meus pontos
+                </button>
+
+                <a href="cardapio.html" class="botao-secundario">
+                    Continuar pedindo
+                </a>
+
+            </div>
+
+            <!-- Mensagem dinâmica controlada pelo JavaScript -->
+            <p
+                id="mensagem-fidelidade"
+                class="mensagem-fidelidade"
+                role="status"
+                aria-live="polite"
+            ></p>
+
+        </section>
+
+        <!-- Rodapé -->
+        <footer class="rodape">
+            <p>Raízes do Nordeste — Sabores que aproximam.</p>
+            <a href="index.html">Voltar ao início</a>
+        </footer>
+
+    </main>
+
+</body>
+</html>

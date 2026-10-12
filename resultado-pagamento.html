@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Resultado do pagamento | Raízes do Nordeste</title>
+
+    <!-- Paleta compartilhada -->
+    <link rel="stylesheet" href="css/tema.css">
+
+    <!-- Estilos exclusivos desta tela -->
+    <link rel="stylesheet" href="css/resultado-pagamento.css">
+
+    <!-- Tamanho compartilhado da logo -->
+    <link rel="stylesheet" href="css/logo.css">
+
+    <!-- Funcionalidades compartilhadas -->
+    <script src="js/auth.js" defer></script>
+    <script src="js/utilitarios.js" defer></script>
+
+    <!-- Processamento do resultado -->
+    <script src="js/resultado-pagamento.js" defer></script>
+</head>
+
+<body>
+
+    <main class="pagina">
+
+        <!-- Logo do restaurante -->
+        <header class="cabecalho">
+            <a href="index.html" class="logo" aria-label="Raízes do Nordeste - Início">
+                <img
+                    src="imagens/logo-raizes-nordeste.png"
+                    alt="Raízes do Nordeste — Sabores que aproximam"
+                    class="imagem-logo"
+                >
+            </a>
+        </header>
+
+        <!-- Resultado apresentado ao cliente -->
+        <section class="conteudo" aria-labelledby="titulo-resultado">
+
+            <div
+                id="icone-resultado"
+                class="icone-resultado"
+                aria-hidden="true"
+            >
+                …
+            </div>
+
+            <span class="etiqueta">RAÍZES DO NORDESTE</span>
+
+            <h1 id="titulo-resultado">
+                Verificando pagamento...
+            </h1>
+
+            <p id="subtitulo-resultado" class="subtitulo-resultado">
+                Aguarde enquanto verificamos o resultado.
+            </p>
+
+            <!-- Informações disponíveis após a aprovação -->
+            <section id="dados-pedido" class="dados-pedido" hidden>
+
+                <div class="dado-pedido">
+                    <span>Número do pedido</span>
+                    <strong id="numero-pedido">—</strong>
+                </div>
+
+                <div class="dado-pedido">
+                    <span>Senha de retirada</span>
+                    <strong id="senha-retirada">—</strong>
+                </div>
+
+            </section>
+
+            <p
+                id="detalhe-resultado"
+                class="detalhe-resultado"
+                aria-live="polite"
+            ></p>
+
+            <!-- A ação depende do resultado -->
+            <button
+                type="button"
+                id="botao-resultado"
+                class="botao-principal"
+            >
+                Continuar
+            </button>
+
+            <a href="cardapio.html" class="link-voltar">
+                Voltar ao cardápio
+            </a>
+
+        </section>
+
+        <footer class="rodape">
+            Raízes do Nordeste — Sabores que aproximam.
+        </footer>
+
+    </main>
+
+</body>
+</html>

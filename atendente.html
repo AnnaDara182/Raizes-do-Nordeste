@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atendimento | Raízes do Nordeste</title>
+<link rel="stylesheet" href="css/tema.css"><link rel="stylesheet" href="css/administracao.css"><link rel="stylesheet" href="css/logo.css">
+<script src="js/administracao.js" defer></script>
+</head><body><main class="pagina-admin">
+<header class="topo-admin"><a href="index.html"><img src="imagens/logo-raizes-nordeste.png" alt="Raízes do Nordeste" class="imagem-logo"></a><h1>Atendimento</h1><p>Consulte os pedidos e confirme a entrega após conferir a senha de retirada.</p></header>
+
+<section class="painel-admin"><h2>Pedidos da unidade</h2><p class="texto-suave-admin">Confira o pedido e a senha informada pelo cliente. Marque como entregue somente após a retirada.</p><div class="campo-admin seletor-unidade-admin"><label for="unidade-atendente">Selecione a unidade para consultar os pedidos</label><select id="unidade-atendente"><option value="Unidade 1">Unidade 1</option><option value="Unidade 2">Unidade 2</option></select></div><div class="filtros-atendente" aria-label="Filtrar pedidos por status"><button type="button" class="filtro-atendente ativo" data-filtro="todos" aria-pressed="true">Todos</button><button type="button" class="filtro-atendente" data-filtro="aguardando" aria-pressed="false">Aguardando</button><button type="button" class="filtro-atendente" data-filtro="preparando" aria-pressed="false">Em preparo</button><button type="button" class="filtro-atendente" data-filtro="pronto" aria-pressed="false">Prontos para retirada</button><button type="button" class="filtro-atendente" data-filtro="retirado" aria-pressed="false">Entregues</button></div><div class="tabela-wrap"><table><thead><tr><th>Pedido</th><th>Cliente</th><th>Unidade</th><th>Total</th><th>Status</th><th>Senha de retirada</th><th>Ação</th></tr></thead><tbody id="tabela-atendente"></tbody></table></div><p id="vazio-atendente" class="texto-suave-admin"></p></section>
+<a class="voltar-admin" href="index.html">← Voltar para a página inicial</a></main></body></html>

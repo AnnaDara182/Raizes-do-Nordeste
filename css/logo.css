@@ -1,0 +1,63 @@
+
+/* =========================================
+   LOGO COMPARTILHADA
+   Raízes do Nordeste
+
+   Mantém a proporção da imagem e padroniza
+   o tamanho nas diferentes telas.
+========================================= */
+
+
+/* =========================================
+   1. ESTILO GERAL
+========================================= */
+
+.imagem-logo {
+    display: block;
+
+    /* Tamanho padrão para celulares. */
+    width: 180px;
+
+    /* Impede que a logo ultrapasse o espaço disponível. */
+    max-width: 100%;
+
+    /* Preserva a proporção original da imagem. */
+    height: auto;
+    object-fit: contain;
+
+    /* Evita espaços extras abaixo da imagem. */
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   2. CELULARES PEQUENOS
+========================================= */
+
+@media (max-width: 360px) {
+    .imagem-logo {
+        width: 155px;
+    }
+}
+
+
+/* =========================================
+   3. TABLETS E COMPUTADORES
+========================================= */
+
+@media (min-width: 768px) {
+    .imagem-logo {
+        width: 230px;
+    }
+}
+
+
+/* =========================================
+   4. COMPUTADORES COM TELAS GRANDES
+========================================= */
+
+@media (min-width: 1200px) {
+    .imagem-logo {
+        width: 250px;
+    }
+}

@@ -1,0 +1,222 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Adapta a página à largura do dispositivo -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Raízes do Nordeste | Escolha sua unidade</title>
+
+    <!-- Estilos da página e componentes compartilhados -->
+    <link rel="stylesheet" href="css/tema.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/menu-inferior.css">
+    <link rel="stylesheet" href="css/logo.css">
+
+    <!-- Funcionalidades existentes -->
+    <script src="js/auth.js" defer></script>
+    <script src="script.js" defer></script>
+    <script src="js/menu-inferior.js" defer></script>
+</head>
+
+<body>
+
+    <main class="pagina">
+
+        <!-- =========================================
+             CABEÇALHO E LOGO
+        ========================================== -->
+
+        <header class="cabecalho">
+
+            <a
+                href="index.html"
+                class="logo"
+                aria-label="Raízes do Nordeste - Página inicial"
+            >
+                <img
+                    src="imagens/logo-raizes-nordeste.png"
+                    alt="Raízes do Nordeste — Sabores que aproximam"
+                    class="imagem-logo"
+                >
+            </a>
+
+        </header>
+
+        <!-- =========================================
+             ESCOLHA DA UNIDADE
+        ========================================== -->
+
+        <section
+            class="conteudo"
+            id="selecionar-unidade"
+            aria-labelledby="titulo-unidade"
+        >
+
+            <!-- Título e apresentação -->
+            <div class="introducao">
+
+                <span class="etiqueta-introducao">
+                    RAÍZES DO NORDESTE
+                </span>
+
+                <h1 id="titulo-unidade">
+                    Escolha sua unidade
+                </h1>
+
+                <p>
+                    Escolha onde deseja retirar seu pedido
+                    e descubra nossos sabores.
+                </p>
+
+            </div>
+
+            <!-- Campo de pesquisa -->
+            <div class="campo-busca">
+
+                <label for="buscar-unidade">
+                    Buscar unidade
+                </label>
+
+                <input
+                    type="search"
+                    id="buscar-unidade"
+                    placeholder="Digite o nome ou endereço"
+                    autocomplete="off"
+                >
+
+            </div>
+
+            <!-- Lista de unidades preenchida pelo JavaScript -->
+            <div
+                id="lista-unidades"
+                class="lista-unidades"
+                aria-label="Unidades disponíveis"
+            ></div>
+
+            <!-- Mensagem exibida quando não há resultados -->
+            <p
+                id="mensagem-vazia"
+                class="mensagem-vazia"
+                role="status"
+                hidden
+            >
+                Nenhuma unidade encontrada.
+                Tente buscar por outro nome ou endereço.
+            </p>
+
+            <!-- Confirma a unidade selecionada -->
+            <button
+                type="button"
+                id="confirmar-unidade"
+                class="botao-principal"
+                disabled
+            >
+                Confirmar unidade
+            </button>
+
+            <!-- Orientação para o cliente -->
+            <p class="texto-apoio">
+                Você poderá consultar os pratos após escolher a unidade.
+            </p>
+
+        </section>
+
+        <!-- =========================================
+             ACESSO DA EQUIPE
+             Disponível no final da página.
+        ========================================== -->
+
+        <section
+            class="acesso-equipe"
+            aria-labelledby="titulo-equipe"
+        >
+
+            <!-- Apresentação da área restrita -->
+            <div class="cabecalho-equipe">
+
+                <span class="etiqueta-equipe">
+                    ÁREA RESTRITA
+                </span>
+
+                <h2 id="titulo-equipe">
+                    Acesso da equipe
+                </h2>
+
+                <p>
+                    Acesse o ambiente de trabalho da equipe.
+                </p>
+
+            </div>
+
+            <!-- Único ambiente profissional disponível atualmente -->
+            <div class="opcoes-equipe">
+
+                <a
+                    href="cozinha.html"
+                    class="cartao-equipe"
+                >
+
+                    <!-- Ícone da cozinha -->
+                    <span
+                        class="icone-equipe"
+                        aria-hidden="true"
+                    >
+                        ♨
+                    </span>
+
+                    <!-- Nome e descrição do ambiente -->
+                    <span class="texto-equipe">
+
+                        <strong>Área da cozinha</strong>
+
+                        <small>
+                            Gerencie o preparo e atualize o status dos pedidos.
+                        </small>
+
+                    </span>
+
+                    <!-- Indicador de navegação -->
+                    <span
+                        class="seta-equipe"
+                        aria-hidden="true"
+                    >
+                        →
+                    </span>
+
+                </a>
+
+                <a href="atendente.html" class="cartao-equipe">
+                    <span class="icone-equipe" aria-hidden="true">▣</span>
+                    <span class="texto-equipe"><strong>Área do atendente</strong><small>Registre pedidos de balcão e consulte o andamento.</small></span>
+                    <span class="seta-equipe" aria-hidden="true">→</span>
+                </a>
+
+                <a href="gerente.html" class="cartao-equipe">
+                    <span class="icone-equipe" aria-hidden="true">▤</span>
+                    <span class="texto-equipe"><strong>Área do gerente</strong><small>Gerencie estoque, cardápio, promoções e fidelidade.</small></span>
+                    <span class="seta-equipe" aria-hidden="true">→</span>
+                </a>
+
+                <a href="matriz.html" class="cartao-equipe">
+                    <span class="icone-equipe" aria-hidden="true">▥</span>
+                    <span class="texto-equipe"><strong>Área da matriz</strong><small>Consulte os indicadores e resultados das unidades.</small></span>
+                    <span class="seta-equipe" aria-hidden="true">→</span>
+                </a>
+
+            </div>
+
+            <!-- Aviso sobre o acesso profissional -->
+            <p class="aviso-equipe">
+                Ambiente destinado aos colaboradores da cozinha.
+            </p>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

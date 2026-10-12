@@ -1,0 +1,781 @@
+/* =========================================
+   1. CONFIGURAÇÕES GERAIS
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--fundo);
+    color: var(--texto);
+    line-height: 1.5;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+button,
+a,
+input {
+    -webkit-tap-highlight-color: transparent;
+}
+
+a {
+    color: var(--verde);
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+    outline: 3px solid rgba(33, 72, 43, 0.25);
+    outline-offset: 3px;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+/* =========================================
+   2. ESTRUTURA PRINCIPAL
+========================================= */
+
+.pagina {
+    width: 100%;
+    max-width: 1000px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 16px 16px 36px;
+}
+
+/* =========================================
+   3. CABEÇALHO E LOGO
+========================================= */
+
+.cabecalho {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 92px;
+    margin-bottom: 22px;
+    padding: 8px 48px;
+}
+
+.cabecalho .logo {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    text-decoration: none;
+}
+
+.imagem-logo {
+    display: block;
+    width: 190px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* =========================================
+   4. BOTÃO DO CARRINHO
+========================================= */
+
+.botao-carrinho {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    min-width: 48px;
+    min-height: 44px;
+    padding: 8px;
+    transform: translateY(-50%);
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+    background-color: var(--branco);
+    color: var(--verde);
+    cursor: pointer;
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.botao-carrinho:hover {
+    border-color: var(--verde);
+    background-color: var(--verde-suave);
+}
+
+.icone-carrinho {
+    font-size: 19px;
+    line-height: 1;
+}
+
+.quantidade-carrinho {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 21px;
+    height: 21px;
+    padding: 0 5px;
+    border-radius: 50%;
+    background-color: var(--verde);
+    color: #FFFFFF;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+/* =========================================
+   5. INFORMAÇÕES DA UNIDADE
+========================================= */
+
+.informacoes-loja {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+    padding: 18px;
+    border: 1px solid var(--borda);
+    border-radius: 16px;
+    background-color: var(--branco);
+    box-shadow: var(--sombra);
+}
+
+.dados-loja {
+    min-width: 0;
+}
+
+.etiqueta-secao {
+    display: inline-block;
+    margin-bottom: 5px;
+    color: var(--terracota);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+}
+
+.informacoes-loja h1 {
+    margin: 0 0 4px;
+    color: var(--verde);
+    font-size: 20px;
+    line-height: 1.3;
+}
+
+.informacoes-loja p {
+    margin: 0;
+    color: var(--texto-suave);
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+.link-alterar {
+    flex-shrink: 0;
+    padding: 8px 11px;
+    border: 1px solid var(--borda);
+    border-radius: 9px;
+    color: var(--verde);
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.link-alterar:hover {
+    border-color: var(--verde);
+    background-color: var(--verde-suave);
+}
+
+/* =========================================
+   6. CAMPO DE BUSCA
+========================================= */
+
+.busca {
+    position: relative;
+    margin-bottom: 18px;
+}
+
+.busca input {
+    display: block;
+    width: 100%;
+    min-height: 50px;
+    padding: 13px 15px 13px 44px;
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+    background-color: var(--branco);
+    color: var(--texto);
+    font-size: 14px;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.busca input::placeholder {
+    color: #8A8173;
+}
+
+.busca input:focus {
+    border-color: var(--verde);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(33, 72, 43, 0.12);
+}
+
+.icone-busca {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-54%);
+    color: var(--texto-suave);
+    font-size: 27px;
+    line-height: 1;
+    pointer-events: none;
+}
+
+/* Texto acessível para leitores de tela */
+
+.texto-oculto {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
+/* =========================================
+   7. FILTROS DE CATEGORIA
+========================================= */
+
+.filtros {
+    display: flex;
+    gap: 9px;
+    margin-bottom: 28px;
+    padding: 2px 1px 8px;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--borda) transparent;
+}
+
+.filtro {
+    flex: 0 0 auto;
+    min-height: 40px;
+    padding: 10px 17px;
+    border: 1px solid var(--borda);
+    border-radius: 22px;
+    background-color: var(--branco);
+    color: var(--texto-suave);
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.filtro:hover {
+    border-color: var(--verde);
+    color: var(--verde);
+}
+
+.filtro.ativo {
+    border-color: var(--verde);
+    background-color: var(--verde);
+    color: #FFFFFF;
+}
+
+/* =========================================
+   8. CABEÇALHO DA LISTA DE PRODUTOS
+========================================= */
+
+.secao-produtos {
+    width: 100%;
+}
+
+.cabecalho-produtos {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 16px;
+    margin-bottom: 18px;
+}
+
+.cabecalho-produtos h2 {
+    margin: 0 0 5px;
+    color: var(--verde);
+    font-size: 24px;
+    line-height: 1.25;
+}
+
+.cabecalho-produtos p {
+    margin: 0;
+    color: var(--texto-suave);
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* =========================================
+   9. LISTA E CARTÕES DOS PRODUTOS
+========================================= */
+
+/* No celular, os produtos aparecem um abaixo do outro. */
+
+.lista-produtos {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+}
+
+/* Cartão individual do produto */
+
+.cartao-produto {
+    display: grid;
+    grid-template-columns: 92px minmax(0, 1fr) 40px;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid var(--borda);
+    border-radius: 15px;
+    background-color: var(--branco);
+    box-shadow: 0 3px 12px rgba(53, 43, 25, 0.04);
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+.cartao-produto:hover {
+    border-color: #C8B99E;
+    box-shadow: var(--sombra);
+}
+
+/* Imagem do prato */
+
+.imagem-produto {
+    display: block;
+    width: 92px;
+    height: 92px;
+    border-radius: 11px;
+    background-color: var(--bege);
+    object-fit: cover;
+}
+
+/* Informações do prato */
+
+.dados-produto {
+    min-width: 0;
+}
+
+.nome-produto {
+    margin: 0 0 7px;
+    color: var(--texto);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+}
+
+.preco-produto {
+    margin: 0;
+    color: var(--verde);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.preco-antigo {
+    margin-right: 4px;
+    color: var(--texto-suave);
+    font-size: 12px;
+    text-decoration: line-through;
+}
+
+.preco-promocional {
+    color: var(--verde);
+    font-weight: 700;
+}
+
+/* Botão para abrir a personalização do produto */
+
+.botao-adicionar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    border: none;
+    border-radius: 11px;
+    background-color: var(--verde);
+    color: #FFFFFF;
+    font-size: 25px;
+    line-height: 1;
+    cursor: pointer;
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.botao-adicionar:hover {
+    background-color: var(--verde-claro);
+}
+
+.botao-adicionar:active {
+    transform: scale(0.95);
+}
+
+/* Mensagem para buscas sem resultados */
+
+.mensagem-vazia {
+    margin: 12px 0;
+    padding: 22px 16px;
+    border: 1px dashed var(--borda);
+    border-radius: 12px;
+    color: var(--texto-suave);
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* =========================================
+   10. ACESSO AO PROGRAMA DE FIDELIDADE
+========================================= */
+
+.botao-fidelidade {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    width: 100%;
+    margin-top: 24px;
+    padding: 17px;
+    border: 1px solid var(--borda);
+    border-radius: 15px;
+    background-color: var(--verde-suave);
+    color: var(--verde);
+    text-decoration: none;
+    transition:
+        border-color 0.2s ease,
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.botao-fidelidade:hover {
+    border-color: var(--verde);
+    background-color: #DFE6D6;
+}
+
+.botao-fidelidade:active {
+    transform: scale(0.99);
+}
+
+.icone-fidelidade {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    background-color: var(--branco);
+    color: var(--terracota);
+    font-size: 23px;
+}
+
+.texto-fidelidade {
+    flex: 1;
+    min-width: 0;
+}
+
+.texto-fidelidade strong,
+.texto-fidelidade small {
+    display: block;
+}
+
+.texto-fidelidade strong {
+    margin-bottom: 3px;
+    font-size: 14px;
+}
+
+.texto-fidelidade small {
+    color: var(--texto-suave);
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.seta-fidelidade {
+    flex-shrink: 0;
+    font-size: 22px;
+}
+
+/* Texto no final da página */
+
+.texto-rodape {
+    margin: 20px 0 0;
+    color: var(--texto-suave);
+    font-size: 12px;
+    text-align: center;
+}
+
+/* =========================================
+   11. TABLETS E DESKTOP
+========================================= */
+
+@media (min-width: 600px) {
+    .pagina {
+        padding: 20px 24px 44px;
+    }
+
+    .cabecalho {
+        min-height: 110px;
+        margin-bottom: 26px;
+    }
+
+    .imagem-logo {
+        width: 220px;
+    }
+
+    .informacoes-loja {
+        padding: 22px;
+    }
+
+    .informacoes-loja h1 {
+        font-size: 23px;
+    }
+
+    .busca input {
+        min-height: 54px;
+        font-size: 15px;
+    }
+
+    .filtros {
+        gap: 12px;
+    }
+
+    .filtro {
+        padding: 11px 20px;
+        font-size: 14px;
+    }
+
+    .cabecalho-produtos h2 {
+        font-size: 27px;
+    }
+
+    .lista-produtos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .cartao-produto {
+        grid-template-columns: 90px minmax(0, 1fr);
+        grid-template-rows: auto auto;
+        align-content: start;
+        gap: 12px;
+        padding: 14px;
+    }
+
+    .imagem-produto {
+        width: 90px;
+        height: 90px;
+        grid-row: 1 / 3;
+    }
+
+    .dados-produto {
+        align-self: end;
+    }
+
+    .botao-adicionar {
+        grid-column: 2;
+        justify-self: end;
+        width: 40px;
+        height: 40px;
+    }
+
+    .nome-produto {
+        font-size: 15px;
+    }
+
+    .preco-produto {
+        font-size: 14px;
+    }
+
+    .botao-fidelidade {
+        padding: 19px;
+    }
+}
+
+@media (min-width: 900px) {
+    .pagina {
+        padding-top: 24px;
+    }
+
+    .cabecalho {
+        margin-bottom: 30px;
+    }
+
+    .informacoes-loja {
+        margin-bottom: 24px;
+    }
+
+    .busca {
+        margin-bottom: 20px;
+    }
+
+    .filtros {
+        margin-bottom: 30px;
+    }
+
+    .lista-produtos {
+        gap: 18px;
+    }
+
+    .cartao-produto {
+        grid-template-columns: 110px minmax(0, 1fr) 42px;
+        grid-template-rows: auto;
+        align-items: center;
+        gap: 14px;
+        padding: 14px;
+    }
+
+    .imagem-produto {
+        grid-row: auto;
+        width: 110px;
+        height: 100px;
+    }
+
+    .dados-produto {
+        align-self: center;
+    }
+
+    .botao-adicionar {
+        grid-column: auto;
+        justify-self: auto;
+    }
+
+    .nome-produto {
+        font-size: 15px;
+    }
+}
+
+/* =========================================
+   12. CELULARES ESTREITOS
+========================================= */
+
+@media (max-width: 380px) {
+    .pagina {
+        padding: 10px 10px 28px;
+    }
+
+    .cabecalho {
+        min-height: 78px;
+        padding-right: 42px;
+        padding-left: 42px;
+    }
+
+    .imagem-logo {
+        width: 165px;
+    }
+
+    .botao-carrinho {
+        min-width: 40px;
+        min-height: 40px;
+        gap: 3px;
+        padding: 5px;
+    }
+
+    .icone-carrinho {
+        font-size: 16px;
+    }
+
+    .quantidade-carrinho {
+        min-width: 18px;
+        height: 18px;
+        font-size: 10px;
+    }
+
+    .informacoes-loja {
+        gap: 8px;
+        padding: 13px;
+    }
+
+    .informacoes-loja h1 {
+        font-size: 17px;
+    }
+
+    .informacoes-loja p {
+        font-size: 11px;
+    }
+
+    .link-alterar {
+        padding: 7px 8px;
+        font-size: 11px;
+    }
+
+    .cartao-produto {
+        grid-template-columns: 70px minmax(0, 1fr) 34px;
+        gap: 8px;
+        padding: 9px;
+    }
+
+    .imagem-produto {
+        width: 70px;
+        height: 74px;
+    }
+
+    .nome-produto {
+        font-size: 12px;
+    }
+
+    .preco-produto,
+    .preco-antigo {
+        font-size: 11px;
+    }
+
+    .botao-adicionar {
+        width: 32px;
+        height: 32px;
+        border-radius: 9px;
+        font-size: 21px;
+    }
+
+    .cabecalho-produtos h2 {
+        font-size: 21px;
+    }
+
+    .cabecalho-produtos p {
+        font-size: 12px;
+    }
+}
+
+/* =========================================
+   13. ACESSIBILIDADE
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}

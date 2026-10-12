@@ -1,0 +1,429 @@
+
+/* =========================================
+   1. CONFIGURAÇÕES GERAIS
+========================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--fundo);
+    color: var(--texto);
+}
+
+.pagina {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 20px 16px;
+}
+
+/* =========================================
+   2. CABEÇALHO E LOGO
+========================================= */
+
+.cabecalho {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 28px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+/* =========================================
+   3. CONTEÚDO PRINCIPAL
+========================================= */
+
+.conteudo {
+    width: 100%;
+    max-width: 620px;
+    margin: 0 auto;
+}
+
+.link-voltar {
+    display: inline-block;
+    margin-bottom: 22px;
+    color: var(--verde);
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.link-voltar:hover {
+    text-decoration: underline;
+}
+
+.conteudo > h1 {
+    margin-bottom: 8px;
+    font-size: 27px;
+    line-height: 1.3;
+}
+
+.descricao-pagina {
+    margin-bottom: 24px;
+    color: var(--texto-suave);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* =========================================
+   4. CARTÃO COM DADOS DO CLIENTE
+========================================= */
+
+.cartao-perfil {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px;
+    border: 1px solid var(--cinza);
+    border-radius: 16px;
+    background-color: var(--branco);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+}
+
+.avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    background-color: #e8e2d6;
+    color: var(--verde);
+    font-size: 32px;
+}
+
+.dados-cliente {
+    min-width: 0;
+}
+
+.identificacao-cliente {
+    margin-bottom: 5px;
+    color: var(--texto-suave);
+    font-size: 12px;
+}
+
+.cartao-perfil h2 {
+    margin-bottom: 6px;
+    font-size: 19px;
+    overflow-wrap: anywhere;
+}
+
+.cartao-perfil p:last-child {
+    color: var(--texto-suave);
+    font-size: 13px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+/* =========================================
+   5. SEÇÕES DE OPÇÕES
+========================================= */
+
+.secao-opcoes,
+.secao-acoes {
+    margin-top: 28px;
+}
+
+.secao-opcoes > h2,
+.secao-acoes > h2 {
+    margin-bottom: 12px;
+    font-size: 17px;
+}
+
+/* Cartão que agrupa os links e botões */
+
+.opcoes-perfil,
+.cartao-acoes {
+    overflow: hidden;
+    border: 1px solid var(--cinza);
+    border-radius: 14px;
+    background-color: var(--branco);
+}
+
+/* Links e botões das opções */
+
+.opcao-perfil,
+.acao-conta {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    width: 100%;
+    min-height: 76px;
+    padding: 15px;
+    border: none;
+    border-bottom: 1px solid var(--cinza);
+    background-color: transparent;
+    color: var(--texto);
+    font-family: inherit;
+    text-align: left;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.opcao-perfil:last-child,
+.acao-conta:last-child {
+    border-bottom: none;
+}
+
+.opcao-perfil:hover,
+.acao-conta:hover {
+    background-color: #f7f2e9;
+}
+
+/* Ícones */
+
+.icone-opcao,
+.icone-acao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    background-color: #f0eee5;
+    color: var(--verde);
+    font-size: 22px;
+}
+
+/* Textos dos itens */
+
+.texto-opcao,
+.texto-acao {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 5px;
+    min-width: 0;
+}
+
+.texto-opcao strong,
+.texto-acao strong {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+.texto-opcao small,
+.texto-acao small {
+    color: var(--texto-suave);
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* Seta ao lado de cada opção */
+
+.seta-opcao {
+    flex-shrink: 0;
+    color: var(--texto-suave);
+    font-size: 25px;
+    line-height: 1;
+}
+
+/* =========================================
+   6. ÁREA DE ALTERAÇÃO DE SENHA
+========================================= */
+
+.area-alterar-senha {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid var(--cinza);
+    border-radius: 16px;
+    background-color: var(--branco);
+}
+
+.area-alterar-senha h2 {
+    margin-bottom: 8px;
+    font-size: 20px;
+}
+
+.descricao-formulario {
+    margin-bottom: 20px;
+    color: var(--texto-suave);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* Campos do formulário */
+
+.campo-perfil {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.campo-perfil label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.campo-perfil input {
+    width: 100%;
+    min-height: 46px;
+    padding: 12px;
+    border: 1px solid #d6cbb8;
+    border-radius: 9px;
+    background-color: #fff;
+    color: var(--texto);
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.campo-perfil input:focus {
+    outline: 2px solid var(--verde);
+    outline-offset: 1px;
+}
+
+/* Botões do formulário */
+
+.botao-confirmar,
+.botao-cancelar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 46px;
+    margin-top: 10px;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.botao-confirmar {
+    background-color: var(--verde);
+    color: var(--branco);
+}
+
+.botao-confirmar:hover {
+    opacity: 0.9;
+}
+
+.botao-cancelar {
+    background-color: #eee8dc;
+    color: var(--texto);
+}
+
+.botao-cancelar:hover {
+    background-color: #e4dccd;
+}
+
+/* Mensagem de sucesso ou erro */
+
+#mensagem-senha {
+    margin-top: 14px;
+    color: var(--texto);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* =========================================
+   7. AÇÕES DA CONTA
+========================================= */
+
+.botao-excluir {
+    color: #a83232;
+}
+
+.botao-excluir .icone-acao {
+    background-color: #f9e9e6;
+    color: #a83232;
+}
+
+.botao-excluir:hover {
+    background-color: #fff4f2;
+}
+
+/* Não exibe a área de senha quando estiver oculta */
+
+[hidden] {
+    display: none !important;
+}
+
+/* =========================================
+   8. RODAPÉ
+========================================= */
+
+.rodape {
+    margin-top: auto;
+    padding: 48px 8px 20px;
+    color: var(--texto-suave);
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* =========================================
+   9. AJUSTES PARA DESKTOP
+========================================= */
+
+@media (min-width: 768px) {
+
+    .pagina {
+        padding: 28px;
+    }
+
+    .cabecalho {
+        margin-bottom: 36px;
+    }
+
+    .conteudo > h1 {
+        font-size: 30px;
+    }
+
+    .descricao-pagina {
+        font-size: 15px;
+    }
+
+    .cartao-perfil {
+        padding: 24px;
+    }
+
+    .avatar {
+        width: 68px;
+        height: 68px;
+    }
+
+    .cartao-perfil h2 {
+        font-size: 21px;
+    }
+
+    .opcao-perfil,
+    .acao-conta {
+        padding: 17px 20px;
+    }
+
+    .texto-opcao strong,
+    .texto-acao strong {
+        font-size: 15px;
+    }
+
+    .texto-opcao small,
+    .texto-acao small {
+        font-size: 13px;
+    }
+
+    .area-alterar-senha {
+        padding: 24px;
+    }
+
+    .rodape {
+        padding-top: 60px;
+        padding-bottom: 24px;
+    }
+}

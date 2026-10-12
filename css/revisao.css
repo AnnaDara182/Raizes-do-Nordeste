@@ -1,0 +1,549 @@
+/* =========================================
+   1. CONFIGURAÇÕES GERAIS
+========================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--fundo);
+    color: var(--texto);
+    line-height: 1.5;
+}
+
+.pagina {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+/* =========================================
+   2. CABEÇALHO
+========================================= */
+
+.cabecalho {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 28px;
+}
+
+.link-voltar {
+    justify-self: start;
+    color: var(--verde);
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.link-voltar:hover {
+    color: var(--verde-claro);
+    text-decoration: underline;
+}
+
+.logo {
+    grid-column: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+/* O tamanho da imagem da logo é definido em css/logo.css */
+
+/* =========================================
+   3. INTRODUÇÃO
+========================================= */
+
+.introducao {
+    margin-bottom: 28px;
+}
+
+.etiqueta {
+    display: inline-block;
+    margin-bottom: 8px;
+    color: var(--terracota);
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+}
+
+.titulo-pagina {
+    margin-bottom: 8px;
+    font-size: 26px;
+    line-height: 1.25;
+}
+
+.descricao-pagina {
+    color: var(--texto-suave);
+    font-size: 14px;
+}
+
+/* =========================================
+   4. TÍTULOS E SEÇÕES
+========================================= */
+
+.secao-unidade,
+.secao-itens,
+.secao-fidelidade,
+.secao-total {
+    margin-bottom: 24px;
+}
+
+.secao-unidade h2,
+.secao-itens h2,
+.secao-total h2 {
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+
+/* =========================================
+   5. UNIDADE DE RETIRADA
+========================================= */
+
+.cartao-unidade {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    border: 1px solid var(--borda);
+    border-radius: 14px;
+    background-color: var(--branco);
+}
+
+.icone-unidade {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background-color: var(--verde-suave);
+    font-size: 20px;
+}
+
+.dados-unidade {
+    flex: 1;
+    min-width: 0;
+}
+
+.dados-unidade strong {
+    display: block;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+.dados-unidade p {
+    margin-top: 4px;
+    color: var(--texto-suave);
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+.link-alterar {
+    flex-shrink: 0;
+    color: var(--verde);
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.link-alterar:hover {
+    text-decoration: underline;
+}
+
+/* =========================================
+   6. ITENS DA REVISÃO
+========================================= */
+
+.lista-revisao {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.item-revisao {
+    display: grid;
+    grid-template-columns: 76px minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    border: 1px solid var(--borda);
+    border-radius: 14px;
+    background-color: var(--branco);
+}
+
+.imagem-revisao {
+    width: 76px;
+    height: 76px;
+    object-fit: cover;
+    border-radius: 10px;
+    background-color: var(--bege);
+}
+
+.dados-revisao {
+    min-width: 0;
+}
+
+.nome-revisao {
+    font-size: 15px;
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+}
+
+.detalhes-revisao {
+    margin-top: 6px;
+    color: var(--texto-suave);
+    font-size: 12px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.preco-revisao {
+    margin-top: 6px;
+    color: var(--verde);
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.quantidade-revisao {
+    align-self: center;
+    padding: 6px 9px;
+    border-radius: 8px;
+    background-color: var(--verde-suave);
+    color: var(--verde);
+    font-size: 12px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* Mensagem para carrinho vazio */
+
+.mensagem-vazia {
+    padding: 24px 16px;
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+    background-color: var(--branco);
+    color: var(--texto-suave);
+    font-size: 14px;
+    text-align: center;
+}
+
+.mensagem-vazia a {
+    display: inline-block;
+    margin-left: 4px;
+    color: var(--verde);
+    font-weight: bold;
+}
+
+/* =========================================
+   7. PROGRAMA DE FIDELIDADE
+========================================= */
+
+.secao-fidelidade {
+    padding: 18px;
+    border: 1px solid var(--borda);
+    border-radius: 14px;
+    background-color: var(--bege);
+}
+
+.cabecalho-fidelidade {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.icone-fidelidade {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background-color: var(--verde);
+    color: var(--branco);
+    font-size: 22px;
+}
+
+.cabecalho-fidelidade h2 {
+    margin-bottom: 4px;
+    font-size: 17px;
+}
+
+.cabecalho-fidelidade p {
+    color: var(--texto-suave);
+    font-size: 12px;
+}
+
+.pontos-ganhos {
+    padding: 12px;
+    border-radius: 10px;
+    background-color: var(--branco);
+    color: var(--verde);
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.opcao-pontos {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 16px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.opcao-pontos input {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    margin-top: 2px;
+    accent-color: var(--verde);
+    cursor: pointer;
+}
+
+.opcao-pontos input:focus-visible {
+    outline: 2px solid var(--verde);
+    outline-offset: 3px;
+}
+
+.aviso-pontos {
+    margin-top: 10px;
+    color: var(--texto-suave);
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.link-fidelidade {
+    display: inline-block;
+    margin-top: 14px;
+    color: var(--verde);
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.link-fidelidade:hover {
+    text-decoration: underline;
+}
+
+/* =========================================
+   8. RESUMO DOS VALORES
+========================================= */
+
+.secao-total {
+    padding: 18px;
+    border: 1px solid var(--borda);
+    border-radius: 14px;
+    background-color: var(--branco);
+}
+
+.secao-total h2 {
+    margin-bottom: 18px;
+}
+
+.linha-total {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 14px;
+    font-size: 14px;
+}
+
+.linha-total span:last-child,
+.linha-total strong:last-child {
+    flex-shrink: 0;
+    text-align: right;
+}
+
+.valor-final {
+    margin-top: 18px;
+    margin-bottom: 0;
+    padding-top: 16px;
+    border-top: 1px solid var(--borda);
+    font-size: 19px;
+}
+
+.valor-final strong:last-child {
+    color: var(--verde);
+}
+
+.aviso-retirada {
+    margin-top: 16px;
+    color: var(--texto-suave);
+    font-size: 12px;
+}
+
+/* =========================================
+   9. BOTÕES DE NAVEGAÇÃO
+========================================= */
+
+.acoes-revisao {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.botao-principal,
+.botao-secundario {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    font-family: inherit;
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.botao-principal {
+    background-color: var(--verde);
+    color: var(--branco);
+    font-weight: bold;
+}
+
+.botao-principal:hover:not(:disabled) {
+    background-color: var(--verde-claro);
+}
+
+.botao-secundario {
+    border: 1px solid var(--borda);
+    background-color: var(--bege);
+    color: var(--texto);
+}
+
+.botao-secundario:hover {
+    background-color: var(--verde-suave);
+}
+
+.botao-principal:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+.botao-principal:focus-visible,
+.botao-secundario:focus-visible {
+    outline: 3px solid var(--terracota);
+    outline-offset: 3px;
+}
+
+/* Mensagens de retorno */
+
+.mensagem-final {
+    margin-top: 14px;
+    color: var(--verde);
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* =========================================
+   10. DESKTOP
+========================================= */
+
+@media (min-width: 768px) {
+
+    .pagina {
+        padding: 28px;
+    }
+
+    .cabecalho {
+        margin-bottom: 36px;
+    }
+
+    .introducao {
+        margin-bottom: 32px;
+    }
+
+    .titulo-pagina {
+        font-size: 30px;
+    }
+
+    .descricao-pagina {
+        font-size: 15px;
+    }
+
+    .item-revisao {
+        grid-template-columns: 90px minmax(0, 1fr) auto;
+        gap: 16px;
+        padding: 16px;
+    }
+
+    .imagem-revisao {
+        width: 90px;
+        height: 90px;
+    }
+
+    .nome-revisao {
+        font-size: 17px;
+    }
+
+    .detalhes-revisao {
+        font-size: 13px;
+    }
+
+    .secao-fidelidade,
+    .secao-total {
+        padding: 22px;
+    }
+
+    .acoes-revisao {
+        flex-direction: row;
+    }
+
+    .acoes-revisao > * {
+        flex: 1;
+    }
+}
+
+/* =========================================
+   11. CELULARES PEQUENOS
+========================================= */
+
+@media (max-width: 380px) {
+
+    .pagina {
+        padding: 12px;
+    }
+
+    .item-revisao {
+        grid-template-columns: 60px minmax(0, 1fr);
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .imagem-revisao {
+        width: 60px;
+        height: 60px;
+    }
+
+    .nome-revisao {
+        font-size: 14px;
+    }
+
+    .quantidade-revisao {
+        grid-column: 2;
+        justify-self: start;
+    }
+
+    .secao-fidelidade,
+    .secao-total {
+        padding: 14px;
+    }
+
+    .valor-final {
+        font-size: 17px;
+    }
+}

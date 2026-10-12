@@ -1,0 +1,491 @@
+
+/* =========================================
+   ACOMPANHAMENTO DO PEDIDO
+   Raízes do Nordeste
+========================================= */
+
+.pagina {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 24px 18px 32px;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 22px;
+    border-bottom: 1px solid var(--borda);
+}
+
+.logo {
+    display: inline-flex;
+    justify-content: center;
+}
+
+.conteudo {
+    padding-top: 24px;
+}
+
+.voltar-inicio {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: var(--verde);
+    font-size: 13px;
+}
+
+.voltar-inicio:hover {
+    text-decoration: underline;
+}
+
+.conteudo > h1 {
+    margin: 0;
+    color: var(--verde);
+    font-size: clamp(26px, 5vw, 32px);
+    line-height: 1.25;
+}
+
+.descricao-pagina {
+    margin: 9px 0 24px;
+    color: var(--texto-suave);
+    font-size: 14px;
+}
+
+/* Cartão principal */
+
+.cartao-pedido {
+    padding: 22px;
+    background: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 18px;
+    box-shadow: 0 5px 18px rgba(33, 72, 43, 0.04);
+}
+
+.identificacao-pedido {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.texto-suave {
+    margin: 0 0 5px;
+    color: var(--texto-suave);
+    font-size: 12px;
+}
+
+#numero-pedido {
+    color: var(--verde);
+    font-size: 25px;
+}
+
+.etiqueta-status {
+    display: inline-block;
+    max-width: 55%;
+    padding: 7px 11px;
+    background: var(--bege);
+    color: var(--verde);
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.etiqueta-status.status-preparando {
+    background: var(--amarelo);
+    color: #70551E;
+}
+
+.etiqueta-status.status-pronto,
+.etiqueta-status.status-retirado {
+    background: var(--verde-suave);
+    color: var(--verde);
+}
+
+.separador {
+    height: 1px;
+    margin: 20px 0;
+    background: var(--borda);
+}
+
+/* Linha do tempo */
+
+.secao-status h2 {
+    margin: 0 0 22px;
+    color: var(--verde);
+    font-size: 18px;
+}
+
+.linha-tempo {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.etapa {
+    position: relative;
+    display: flex;
+    gap: 13px;
+    min-height: 78px;
+    padding-bottom: 20px;
+}
+
+.etapa:last-child {
+    min-height: auto;
+    padding-bottom: 0;
+}
+
+.etapa:not(:last-child)::after {
+    position: absolute;
+    top: 35px;
+    left: 15px;
+    width: 2px;
+    height: calc(100% - 35px);
+    background: var(--borda);
+    content: "";
+}
+
+.marcador {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    background: #F4F0E8;
+    border: 1px solid var(--borda);
+    border-radius: 50%;
+    color: var(--texto-suave);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.texto-etapa {
+    min-width: 0;
+    padding-top: 3px;
+}
+
+.texto-etapa p {
+    margin: 0;
+    color: var(--texto-suave);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.texto-etapa small {
+    display: block;
+    margin-top: 4px;
+    color: var(--texto-suave);
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* Etapas concluídas e etapa atual */
+
+.etapa.concluida .marcador {
+    background: var(--verde);
+    border-color: var(--verde);
+    color: var(--branco);
+}
+
+.etapa.concluida:not(:last-child)::after {
+    background: var(--verde);
+}
+
+.etapa.concluida .texto-etapa p {
+    color: var(--verde);
+}
+
+.etapa.atual .marcador {
+    background: var(--verde-suave);
+    border: 2px solid var(--verde);
+    color: var(--verde);
+}
+
+.etapa.atual .texto-etapa p {
+    color: var(--verde);
+    font-weight: 700;
+}
+
+/* Aviso do status */
+
+.aviso-status {
+    margin: 22px 0 0;
+    padding: 13px 15px;
+    background: var(--fundo);
+    border-radius: 10px;
+    color: var(--texto-suave);
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+/* Senha de retirada */
+
+.senha-pedido {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-top: 24px;
+    padding: 18px;
+    background: #F8F5ED;
+    border: 1px solid var(--borda);
+    border-radius: 13px;
+}
+
+.icone-senha {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    background: var(--verde-suave);
+    color: var(--verde);
+    border-radius: 12px;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.informacoes-senha {
+    min-width: 0;
+}
+
+.informacoes-senha p {
+    margin: 0;
+    color: var(--texto-suave);
+    font-size: 12px;
+}
+
+.informacoes-senha strong {
+    display: block;
+    margin-top: 3px;
+    color: var(--verde);
+    font-size: 27px;
+    letter-spacing: 1px;
+}
+
+.informacoes-senha small {
+    display: block;
+    margin-top: 5px;
+    color: var(--texto-suave);
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+/* =========================================
+   FEEDBACK DO CLIENTE
+========================================= */
+
+.cartao-feedback {
+    margin-top: 22px;
+    padding: 22px;
+    background: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 18px;
+    box-shadow: 0 5px 18px rgba(33, 72, 43, 0.04);
+}
+
+.cartao-feedback[hidden] {
+    display: none;
+}
+
+.cartao-feedback h2 {
+    margin: 0;
+    color: var(--verde);
+    font-size: 20px;
+}
+
+.descricao-feedback {
+    margin: 9px 0 22px;
+    color: var(--texto-suave);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* Avaliação por estrelas */
+
+.campo-avaliacao {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.campo-avaliacao legend {
+    margin-bottom: 12px;
+    color: var(--texto);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.opcoes-estrelas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.opcoes-estrelas label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    min-width: 48px;
+    padding: 10px;
+    background: #FAF7F0;
+    border: 1px solid var(--borda);
+    border-radius: 10px;
+    color: #A49A84;
+    cursor: pointer;
+}
+
+.opcoes-estrelas label > input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+.opcoes-estrelas label > span:first-of-type {
+    font-size: 20px;
+}
+
+.opcoes-estrelas .texto-nota {
+    color: var(--texto-suave);
+    font-size: 12px;
+}
+
+.opcoes-estrelas label:has(input:checked) {
+    background: var(--amarelo);
+    border-color: #C9A85A;
+    color: #946C17;
+}
+
+.opcoes-estrelas label:has(input:focus-visible) {
+    outline: 2px solid var(--verde-claro);
+    outline-offset: 3px;
+}
+
+/* Comentário */
+
+.campo-comentario {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 23px;
+}
+
+.campo-comentario label {
+    color: var(--texto);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.campo-comentario textarea {
+    width: 100%;
+    min-height: 100px;
+    padding: 12px;
+    background: var(--campo);
+    border: 1px solid var(--borda);
+    border-radius: 10px;
+    color: var(--texto);
+    font: inherit;
+    font-size: 13px;
+    resize: vertical;
+}
+
+.campo-comentario textarea:focus {
+    outline: 2px solid var(--verde-claro);
+    outline-offset: 2px;
+}
+
+.campo-comentario small {
+    color: var(--texto-suave);
+    font-size: 11px;
+}
+
+/* Botões */
+
+.botao-feedback,
+.botao-inicio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 46px;
+    padding: 12px 18px;
+    border-radius: 11px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.botao-feedback {
+    margin-top: 20px;
+    background: var(--verde);
+    border: 1px solid var(--verde);
+    color: var(--branco);
+    cursor: pointer;
+}
+
+.botao-feedback:hover {
+    background: var(--verde-claro);
+}
+
+.botao-inicio {
+    max-width: 280px;
+    margin: 28px auto 0;
+    background: var(--verde);
+    color: var(--branco);
+}
+
+.botao-inicio:hover {
+    background: var(--verde-claro);
+    color: var(--branco);
+}
+
+.botao-feedback:focus-visible,
+.botao-inicio:focus-visible {
+    outline: 2px solid var(--verde-claro);
+    outline-offset: 3px;
+}
+
+/* Mensagens de feedback */
+
+.mensagem-feedback {
+    margin: 14px 0 0;
+    color: var(--verde);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.mensagem-feedback:empty {
+    display: none;
+}
+
+/* Rodapé */
+
+.rodape {
+    padding: 28px 0 0;
+    color: var(--texto-suave);
+    text-align: center;
+    font-size: 11px;
+}
+
+/* Telas maiores */
+
+@media (min-width: 600px) {
+    .pagina {
+        padding: 30px 24px 36px;
+    }
+
+    .cartao-pedido,
+    .cartao-feedback {
+        padding: 26px;
+    }
+}

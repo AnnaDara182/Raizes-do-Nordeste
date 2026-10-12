@@ -1,0 +1,240 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Entrar | Raízes do Nordeste</title>
+
+    <!-- Estilos compartilhados -->
+    <link rel="stylesheet" href="css/tema.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/logo.css">
+
+    <!-- Funcionalidades do login -->
+    <script src="js/auth.js" defer></script>
+    <script src="js/login.js" defer></script>
+</head>
+
+<body>
+
+    <main class="pagina">
+
+        <!-- Cabeçalho com a logo -->
+        <header class="cabecalho">
+            <a href="index.html" class="logo"
+                aria-label="Raízes do Nordeste - Início">
+
+                <img
+                    src="imagens/logo-raizes-nordeste.png"
+                    alt="Raízes do Nordeste — Sabores que aproximam"
+                    class="imagem-logo"
+                >
+
+            </a>
+        </header>
+
+        <!-- Área principal do login -->
+        <section class="area-login">
+
+            <a href="index.html" class="link-voltar">
+                ← Voltar para o início
+            </a>
+
+            <div class="cabecalho-login">
+                <span class="etiqueta-login">BEM-VINDO(A) DE VOLTA</span>
+
+                <h1>Acesse sua conta</h1>
+
+                <p class="texto-introducao">
+                    Entre para acompanhar seus pedidos e aproveitar
+                    os benefícios do nosso programa de fidelidade.
+                </p>
+            </div>
+
+            <!-- Formulário de entrada -->
+            <form id="form-login">
+
+                <div class="campo">
+                    <label for="identificador">E-mail ou telefone</label>
+
+                    <input
+                        type="text"
+                        id="identificador"
+                        name="identificador"
+                        placeholder="Digite seu e-mail ou telefone"
+                        autocomplete="username"
+                        required
+                    >
+                </div>
+
+                <div class="campo">
+                    <label for="senha">Senha</label>
+
+                    <div class="campo-senha">
+                        <input
+                            type="password"
+                            id="senha"
+                            name="senha"
+                            placeholder="Digite sua senha"
+                            autocomplete="current-password"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            id="mostrar-senha"
+                            class="botao-mostrar-senha"
+                            aria-label="Mostrar senha"
+                            aria-pressed="false"
+                        >
+                            Mostrar
+                        </button>
+                    </div>
+                </div>
+
+                <div class="linha-recuperacao">
+                    <a
+                        href="#"
+                        id="link-recuperar"
+                        class="link-secundario"
+                        aria-controls="area-recuperar-senha"
+                        aria-expanded="false"
+                    >
+                        Esqueci minha senha
+                    </a>
+                </div>
+
+                <button type="submit" class="botao-principal">
+                    Entrar na minha conta
+                </button>
+
+                <p
+                    id="mensagem-login"
+                    class="mensagem"
+                    role="status"
+                    aria-live="polite"
+                ></p>
+
+            </form>
+
+            <!-- Área de recuperação de senha -->
+            <section
+                id="area-recuperar-senha"
+                class="area-recuperar-senha"
+                hidden
+            >
+
+                <h2>Recuperar senha</h2>
+
+                <p class="descricao-recuperacao">
+                    Crie uma nova senha e confirme para recuperar sua conta.
+                </p>
+
+                <form id="form-recuperar-senha">
+
+                    <div class="campo">
+                        <label for="identificador-recuperacao">
+                            E-mail ou telefone
+                        </label>
+
+                        <input
+                            type="text"
+                            id="identificador-recuperacao"
+                            placeholder="Digite seu e-mail ou telefone"
+                            autocomplete="username"
+                            required
+                        >
+                    </div>
+
+                    <div class="campo">
+                        <label for="nova-senha-recuperacao">
+                            Nova senha
+                        </label>
+
+                        <input
+                            type="password"
+                            id="nova-senha-recuperacao"
+                            minlength="8"
+                            autocomplete="new-password"
+                            placeholder="Digite uma nova senha"
+                            required
+                        >
+                    </div>
+
+                    <div class="campo">
+                        <label for="confirmar-senha-recuperacao">
+                            Confirmar nova senha
+                        </label>
+
+                        <input
+                            type="password"
+                            id="confirmar-senha-recuperacao"
+                            minlength="8"
+                            autocomplete="new-password"
+                            placeholder="Digite a senha novamente"
+                            required
+                        >
+                    </div>
+
+                    <button type="submit" class="botao-principal">
+                        Confirmar nova senha
+                    </button>
+
+                    <button
+                        type="button"
+                        id="botao-cancelar-recuperacao"
+                        class="botao-cancelar"
+                    >
+                        Cancelar
+                    </button>
+
+                    <p
+                        id="mensagem-recuperacao"
+                        class="mensagem"
+                        role="status"
+                        aria-live="polite"
+                    ></p>
+
+                </form>
+
+            </section>
+
+            <!-- Separador -->
+            <div class="separador">
+                <span></span>
+                <p>OU</p>
+                <span></span>
+            </div>
+
+            <!-- Cadastro -->
+            <div class="area-cadastro">
+                <p>Ainda não tem uma conta?</p>
+
+                <a href="cadastro.html" class="link-criar-conta">
+                    Criar minha conta
+                </a>
+            </div>
+
+        </section>
+
+        <!-- Rodapé -->
+        <footer class="rodape">
+            <p>
+                Ao continuar, você concorda com nossos
+                <a href="#" class="link-termo">Termos de Uso</a>
+                e
+                <a href="#" class="link-termo">Política de Privacidade</a>.
+            </p>
+
+            <p class="assinatura">
+                Raízes do Nordeste — Sabores que aproximam.
+            </p>
+        </footer>
+
+    </main>
+
+</body>
+</html>

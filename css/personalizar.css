@@ -1,0 +1,412 @@
+/* =========================================
+   1. CONFIGURAÇÕES GERAIS
+========================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--fundo);
+    color: var(--texto);
+    line-height: 1.5;
+}
+
+.pagina {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+/* =========================================
+   2. CABEÇALHO
+========================================= */
+
+.cabecalho {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.link-voltar {
+    justify-self: start;
+    color: var(--verde);
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.link-voltar:hover {
+    color: var(--verde-claro);
+    text-decoration: underline;
+}
+
+.logo {
+    grid-column: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+/* O tamanho da imagem da logo é controlado por css/logo.css */
+
+/* =========================================
+   3. INFORMAÇÕES DO PRATO
+========================================= */
+
+.produto {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.imagem-prato {
+    display: block;
+    width: 100%;
+    max-width: 420px;
+    height: 230px;
+    margin: 0 auto 18px;
+    object-fit: cover;
+    border: 1px solid var(--borda);
+    border-radius: 16px;
+    background: var(--bege);
+}
+
+.produto h1 {
+    margin-bottom: 8px;
+    font-size: 25px;
+    line-height: 1.25;
+}
+
+.preco-prato {
+    color: var(--verde);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* =========================================
+   4. SEÇÃO DE PERSONALIZAÇÃO
+========================================= */
+
+.secao-personalizacao {
+    padding: 20px;
+    border: 1px solid var(--borda);
+    border-radius: 16px;
+    background: var(--branco);
+}
+
+.secao-personalizacao h2 {
+    margin-bottom: 8px;
+    font-size: 21px;
+}
+
+.descricao {
+    margin-bottom: 20px;
+    color: var(--texto-suave);
+    font-size: 14px;
+}
+
+/* Lista de adicionais */
+
+.lista-adicionais {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Cartão individual de cada adicional */
+
+.item-adicional {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px;
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+    background: var(--branco);
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+.item-adicional:has(input[type="checkbox"]:checked) {
+    border-color: var(--verde);
+    background: var(--verde-suave);
+}
+
+/* Caixa de seleção */
+
+.item-adicional input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    accent-color: var(--verde);
+    cursor: pointer;
+}
+
+/* Nome e preço do adicional */
+
+.dados-adicional {
+    flex: 1;
+    min-width: 0;
+}
+
+.nome-adicional {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.preco-adicional {
+    display: block;
+    margin-top: 4px;
+    color: var(--texto-suave);
+    font-size: 13px;
+}
+
+/* =========================================
+   5. CONTROLES DE QUANTIDADE
+========================================= */
+
+.controle-quantidade {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    gap: 8px;
+}
+
+.controle-quantidade button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border: 1px solid var(--borda);
+    border-radius: 8px;
+    background: var(--bege);
+    color: var(--texto);
+    font-size: 19px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.controle-quantidade button:hover {
+    background: var(--verde-suave);
+}
+
+.controle-quantidade button:focus-visible,
+.item-adicional input:focus-visible {
+    outline: 2px solid var(--verde);
+    outline-offset: 3px;
+}
+
+.quantidade {
+    min-width: 18px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* =========================================
+   6. CAMPO PARA RETIRAR INGREDIENTES
+========================================= */
+
+.campo-retirar {
+    margin-top: 24px;
+}
+
+.campo-retirar label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.campo-retirar textarea {
+    display: block;
+    width: 100%;
+    min-height: 90px;
+    padding: 14px;
+    border: 1px solid var(--borda);
+    border-radius: 10px;
+    background: var(--branco);
+    color: var(--texto);
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 1.5;
+    resize: vertical;
+}
+
+.campo-retirar textarea::placeholder {
+    color: var(--texto-suave);
+    opacity: 0.8;
+}
+
+.campo-retirar textarea:focus {
+    border-color: var(--verde);
+    outline: 2px solid var(--verde-suave);
+}
+
+/* =========================================
+   7. RESUMO DOS VALORES
+========================================= */
+
+.resumo {
+    margin-top: 20px;
+    padding: 18px;
+    border: 1px solid var(--borda);
+    border-radius: 14px;
+    background: var(--bege);
+}
+
+.resumo p {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.resumo p span:last-child {
+    flex-shrink: 0;
+    text-align: right;
+}
+
+.resumo p:last-child {
+    margin-bottom: 0;
+}
+
+.resumo .total {
+    padding-top: 14px;
+    border-top: 1px solid var(--borda);
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.resumo .total span:last-child {
+    color: var(--verde);
+}
+
+/* =========================================
+   8. BOTÃO PRINCIPAL
+========================================= */
+
+.botao-principal {
+    width: 100%;
+    margin-top: 20px;
+    padding: 16px;
+    border: none;
+    border-radius: 12px;
+    background: var(--verde);
+    color: var(--branco);
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.botao-principal:hover {
+    background: var(--verde-claro);
+}
+
+.botao-principal:active {
+    transform: scale(0.99);
+}
+
+.botao-principal:focus-visible {
+    outline: 3px solid var(--terracota);
+    outline-offset: 3px;
+}
+
+/* =========================================
+   9. MENSAGEM DE RETORNO
+========================================= */
+
+.mensagem {
+    margin-top: 12px;
+    color: var(--verde);
+    font-size: 14px;
+    text-align: center;
+}
+
+/* =========================================
+   10. TELAS MAIORES
+========================================= */
+
+@media (min-width: 768px) {
+
+    .pagina {
+        padding: 28px;
+    }
+
+    .cabecalho {
+        margin-bottom: 32px;
+    }
+
+    .produto {
+        margin-bottom: 36px;
+    }
+
+    .produto h1 {
+        font-size: 30px;
+    }
+
+    .imagem-prato {
+        height: 300px;
+    }
+
+    .secao-personalizacao {
+        padding: 26px;
+    }
+
+    .item-adicional {
+        padding: 16px;
+    }
+
+    .resumo {
+        padding: 22px;
+    }
+}
+
+/* =========================================
+   11. CELULARES PEQUENOS
+========================================= */
+
+@media (max-width: 380px) {
+
+    .pagina {
+        padding: 12px;
+    }
+
+    .secao-personalizacao {
+        padding: 14px;
+    }
+
+    .item-adicional {
+        gap: 8px;
+        padding: 10px;
+    }
+
+    .controle-quantidade {
+        gap: 5px;
+    }
+
+    .controle-quantidade button {
+        width: 28px;
+        height: 28px;
+    }
+
+    .nome-adicional {
+        font-size: 13px;
+    }
+
+    .resumo {
+        padding: 14px;
+    }
+}

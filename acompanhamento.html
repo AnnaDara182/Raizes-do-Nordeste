@@ -1,0 +1,277 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Acompanhar pedido | Raízes do Nordeste</title>
+
+    <!-- Estilos compartilhados -->
+    <link rel="stylesheet" href="css/tema.css">
+    <link rel="stylesheet" href="css/acompanhamento.css">
+    <link rel="stylesheet" href="css/menu-inferior.css">
+    <link rel="stylesheet" href="css/logo.css">
+
+    <!-- Funcionalidades -->
+    <script src="js/auth.js" defer></script>
+    <script src="js/acompanhamento.js" defer></script>
+    <script src="js/menu-inferior.js" defer></script>
+</head>
+
+<body>
+
+    <main class="pagina">
+
+        <!-- Cabeçalho -->
+        <header class="cabecalho">
+            <a
+                href="index.html"
+                class="logo"
+                aria-label="Raízes do Nordeste - Início"
+            >
+                <img
+                    src="imagens/logo-raizes-nordeste.png"
+                    alt="Raízes do Nordeste — Sabores que aproximam"
+                    class="imagem-logo"
+                >
+            </a>
+        </header>
+
+        <!-- Conteúdo principal -->
+        <section class="conteudo">
+
+            <a href="index.html" class="voltar-inicio">
+                ← Voltar para o início
+            </a>
+
+            <h1>Acompanhar pedido</h1>
+
+            <p class="descricao-pagina">
+                Acompanhe as etapas de preparação e retirada do seu pedido.
+            </p>
+
+            <!-- Informações do pedido -->
+            <section class="cartao-pedido" aria-labelledby="titulo-status">
+
+                <div class="identificacao-pedido">
+                    <div>
+                        <p class="texto-suave">Número do pedido</p>
+                        <strong id="numero-pedido">—</strong>
+                    </div>
+
+                    <span
+                        class="etiqueta-status"
+                        id="etiqueta-status"
+                    >
+                        Carregando...
+                    </span>
+                </div>
+
+                <div class="separador"></div>
+
+                <!-- Linha do tempo -->
+                <section class="secao-status">
+
+                    <h2 id="titulo-status">Status do pedido</h2>
+
+                    <div class="linha-tempo">
+
+                        <div class="etapa" id="etapa-recebido">
+                            <span class="marcador" aria-hidden="true">1</span>
+
+                            <div class="texto-etapa">
+                                <p>Pedido recebido</p>
+                                <small>
+                                    A unidade recebeu seu pedido.
+                                </small>
+                            </div>
+                        </div>
+
+                        <div class="etapa" id="etapa-preparando">
+                            <span class="marcador" aria-hidden="true">2</span>
+
+                            <div class="texto-etapa">
+                                <p>Pedido em preparo</p>
+                                <small>
+                                    A cozinha está preparando seus pratos.
+                                </small>
+                            </div>
+                        </div>
+
+                        <div class="etapa" id="etapa-pronto">
+                            <span class="marcador" aria-hidden="true">3</span>
+
+                            <div class="texto-etapa">
+                                <p>Pronto para retirada</p>
+                                <small>
+                                    Seu pedido está aguardando retirada.
+                                </small>
+                            </div>
+                        </div>
+
+                        <div class="etapa" id="etapa-retirado">
+                            <span class="marcador" aria-hidden="true">4</span>
+
+                            <div class="texto-etapa">
+                                <p>Pedido retirado</p>
+                                <small>
+                                    A retirada foi registrada pela unidade.
+                                </small>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <p
+                        class="aviso-status"
+                        id="aviso-status"
+                        role="status"
+                        aria-live="polite"
+                    >
+                        Carregando informações do pedido...
+                    </p>
+
+                </section>
+
+                <!-- Senha de retirada -->
+                <div class="senha-pedido">
+
+                    <div class="icone-senha" aria-hidden="true">#</div>
+
+                    <div class="informacoes-senha">
+                        <p>Senha para retirada</p>
+
+                        <strong id="senha-retirada">—</strong>
+
+                        <small>
+                            Apresente esta senha à equipe da unidade
+                            para retirar seu pedido.
+                        </small>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- Feedback: só aparece depois da retirada -->
+            <section
+                class="cartao-feedback"
+                id="area-feedback"
+                aria-labelledby="titulo-feedback"
+                hidden
+            >
+
+                <h2 id="titulo-feedback">Como foi sua experiência?</h2>
+
+                <p class="descricao-feedback">
+                    Sua opinião ajuda a melhorar o atendimento do Raízes
+                    do Nordeste. A avaliação é opcional.
+                </p>
+
+                <form id="form-feedback">
+
+                    <fieldset class="campo-avaliacao">
+                        <legend>Escolha uma nota de 1 a 5 estrelas</legend>
+
+                        <div class="opcoes-estrelas">
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="nota"
+                                    value="1"
+                                    required
+                                >
+                                <span aria-hidden="true">★</span>
+                                <span class="texto-nota">1</span>
+                            </label>
+
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="nota"
+                                    value="2"
+                                >
+                                <span aria-hidden="true">★</span>
+                                <span class="texto-nota">2</span>
+                            </label>
+
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="nota"
+                                    value="3"
+                                >
+                                <span aria-hidden="true">★</span>
+                                <span class="texto-nota">3</span>
+                            </label>
+
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="nota"
+                                    value="4"
+                                >
+                                <span aria-hidden="true">★</span>
+                                <span class="texto-nota">4</span>
+                            </label>
+
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="nota"
+                                    value="5"
+                                >
+                                <span aria-hidden="true">★</span>
+                                <span class="texto-nota">5</span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <div class="campo-comentario">
+                        <label for="comentario-feedback">
+                            Comentário (opcional)
+                        </label>
+
+                        <textarea
+                            id="comentario-feedback"
+                            name="comentario"
+                            rows="4"
+                            maxlength="500"
+                            placeholder="Conte como foi sua experiência..."
+                        ></textarea>
+
+                        <small>Máximo de 500 caracteres.</small>
+                    </div>
+
+                    <button type="submit" class="botao-feedback">
+                        Enviar avaliação
+                    </button>
+
+                    <p
+                        id="mensagem-feedback"
+                        class="mensagem-feedback"
+                        role="status"
+                        aria-live="polite"
+                    ></p>
+
+                </form>
+
+            </section>
+
+            <a href="index.html" class="botao-inicio">
+                Voltar para o início
+            </a>
+
+        </section>
+
+        <!-- Rodapé -->
+        <footer class="rodape">
+            Raízes do Nordeste — Sabores que aproximam.
+        </footer>
+
+    </main>
+
+</body>
+</html>

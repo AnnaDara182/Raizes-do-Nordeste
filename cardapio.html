@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Adapta a página a celulares, tablets e computadores -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cardápio | Raízes do Nordeste</title>
+
+    <!-- Identidade visual compartilhada do projeto -->
+    <link rel="stylesheet" href="css/tema.css">
+    <link rel="stylesheet" href="css/cardapio.css">
+    <link rel="stylesheet" href="css/menu-inferior.css">
+    <link rel="stylesheet" href="css/logo.css">
+
+    <!-- Funções compartilhadas e específicas do cardápio -->
+    <script src="js/auth.js" defer></script>
+    <script src="js/utilitarios.js" defer></script>
+    <script src="js/cardapio.js" defer></script>
+    <script src="js/menu-inferior.js" defer></script>
+</head>
+
+<body>
+
+    <main class="pagina">
+
+        <!-- Cabeçalho: logo e acesso ao carrinho -->
+        <header class="cabecalho">
+
+            <a
+                href="index.html"
+                class="logo"
+                aria-label="Raízes do Nordeste - Página inicial"
+            >
+                <img
+                    src="imagens/logo-raizes-nordeste.png"
+                    alt="Raízes do Nordeste — Sabores que aproximam"
+                    class="imagem-logo"
+                >
+            </a>
+
+            <button
+                type="button"
+                class="botao-carrinho"
+                id="abrir-carrinho"
+                aria-label="Abrir carrinho"
+            >
+                <span class="icone-carrinho" aria-hidden="true">🛒</span>
+                <span
+                    id="quantidade-carrinho"
+                    class="quantidade-carrinho"
+                    aria-label="Quantidade de itens no carrinho"
+                >0</span>
+            </button>
+
+        </header>
+
+        <!-- Unidade selecionada pelo cliente -->
+        <section
+            class="informacoes-loja"
+            aria-labelledby="nome-unidade"
+        >
+
+            <div class="dados-loja">
+                <span class="etiqueta-secao">NOSSA UNIDADE</span>
+
+                <h1 id="nome-unidade">Unidade 2</h1>
+
+                <p id="endereco-unidade">
+                    Rua dois, 10 - Centro
+                </p>
+            </div>
+
+            <a href="index.html" class="link-alterar">
+                Alterar unidade
+            </a>
+
+        </section>
+
+        <!-- Pesquisa de pratos e bebidas -->
+        <section class="busca" aria-label="Pesquisar no cardápio">
+
+            <label for="buscar-produto" class="texto-oculto">
+                Buscar prato, bebida ou sobremesa
+            </label>
+
+            <span class="icone-busca" aria-hidden="true">⌕</span>
+
+            <input
+                type="search"
+                id="buscar-produto"
+                placeholder="O que você deseja comer?"
+                autocomplete="off"
+            >
+
+        </section>
+
+        <!-- Categorias disponíveis -->
+        <nav class="filtros" aria-label="Categorias do cardápio">
+
+            <button
+                type="button"
+                class="filtro ativo"
+                data-categoria="Todos"
+                aria-pressed="true"
+            >
+                Tudo
+            </button>
+
+            <button
+                type="button"
+                class="filtro"
+                data-categoria="Comida"
+                aria-pressed="false"
+            >
+                Comidas
+            </button>
+
+            <button
+                type="button"
+                class="filtro"
+                data-categoria="Bebidas"
+                aria-pressed="false"
+            >
+                Bebidas
+            </button>
+
+            <button
+                type="button"
+                class="filtro"
+                data-categoria="Sobremesa"
+                aria-pressed="false"
+            >
+                Sobremesas
+            </button>
+
+        </nav>
+
+        <!-- Título da lista de produtos -->
+        <section
+            class="secao-produtos"
+            aria-labelledby="titulo-cardapio"
+        >
+
+            <div class="cabecalho-produtos">
+                <div>
+                    <span class="etiqueta-secao">FEITO COM CARINHO</span>
+                    <h2 id="titulo-cardapio">Nosso cardápio</h2>
+                    <p>Sabores que aproximam você das nossas raízes.</p>
+                </div>
+            </div>
+
+            <!-- Os cartões dos produtos são criados pelo JavaScript -->
+            <div
+                id="lista-produtos"
+                class="lista-produtos"
+                aria-label="Produtos disponíveis"
+            ></div>
+
+            <!-- Mensagem para pesquisas sem resultados -->
+            <p
+                id="mensagem-vazia"
+                class="mensagem-vazia"
+                role="status"
+                hidden
+            >
+                Não encontramos produtos com esse nome ou categoria.
+                Tente outra busca.
+            </p>
+
+        </section>
+
+        <!-- Acesso à área de fidelidade -->
+        <a
+            href="fidelidade.html"
+            id="link-fidelidade"
+            class="botao-fidelidade"
+        >
+            <span class="icone-fidelidade" aria-hidden="true">✦</span>
+
+            <span class="texto-fidelidade">
+                <strong>Programa de fidelidade</strong>
+                <small>Consulte seus pontos e benefícios</small>
+            </span>
+
+            <span class="seta-fidelidade" aria-hidden="true">→</span>
+        </a>
+
+        <!-- Aviso informativo do protótipo -->
+        <p class="texto-rodape">
+            Escolha seus favoritos e monte seu pedido.
+        </p>
+
+    </main>
+
+</body>
+</html>

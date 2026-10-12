@@ -1,0 +1,630 @@
+/* =========================================
+   1. IDENTIDADE VISUAL DA PÁGINA INICIAL
+========================================= */
+
+:root {
+    --fundo: #F5EBDD;
+    --branco: #FFFDF8;
+    --verde: #21482B;
+    --verde-claro: #365A3C;
+    --verde-suave: #E8ECDD;
+    --texto: #292820;
+    --texto-suave: #6A6255;
+    --borda: #E1D5C0;
+    --bege: #E8E0D0;
+    --terracota: #C87935;
+    --sombra: 0 8px 24px rgba(53, 43, 25, 0.07);
+}
+
+/* =========================================
+   2. CONFIGURAÇÕES GERAIS
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--fundo);
+    color: var(--texto);
+    line-height: 1.5;
+}
+
+button,
+input,
+select {
+    font: inherit;
+}
+
+button,
+a,
+input,
+select {
+    -webkit-tap-highlight-color: transparent;
+}
+
+a {
+    color: var(--verde);
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible {
+    outline: 3px solid rgba(33, 72, 43, 0.25);
+    outline-offset: 3px;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+/* =========================================
+   3. ESTRUTURA DA PÁGINA
+========================================= */
+
+.pagina {
+    width: 100%;
+    max-width: 1000px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 16px 20px 40px;
+}
+
+/* =========================================
+   4. CABEÇALHO E LOGO
+========================================= */
+
+.cabecalho {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 0 24px;
+}
+
+.logo {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.imagem-logo {
+    display: block;
+    width: 220px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* =========================================
+   5. CARTÃO PRINCIPAL
+========================================= */
+
+.conteudo {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 20px;
+    box-shadow: var(--sombra);
+    scroll-margin-top: 20px;
+}
+
+/* =========================================
+   6. TÍTULO E INTRODUÇÃO
+========================================= */
+
+.introducao {
+    margin-bottom: 28px;
+    text-align: center;
+}
+
+.etiqueta-introducao {
+    display: inline-block;
+    margin-bottom: 8px;
+    color: var(--terracota);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.introducao h1 {
+    margin: 0 0 10px;
+    color: var(--verde);
+    font-size: clamp(25px, 4vw, 32px);
+    line-height: 1.25;
+}
+
+.introducao p {
+    max-width: 520px;
+    margin: 0 auto;
+    color: var(--texto-suave);
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* =========================================
+   7. CAMPO DE BUSCA
+========================================= */
+
+.campo-busca {
+    margin-bottom: 22px;
+}
+
+.campo-busca label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--texto);
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.campo-busca input {
+    display: block;
+    width: 100%;
+    min-height: 48px;
+    padding: 12px 15px;
+    border: 1px solid var(--borda);
+    border-radius: 11px;
+    background-color: var(--branco);
+    color: var(--texto);
+    font-size: 15px;
+    transition: border-color 0.2s ease;
+}
+
+.campo-busca input::placeholder {
+    color: #8A8173;
+}
+
+.campo-busca input:focus {
+    border-color: var(--verde);
+    outline: 3px solid rgba(33, 72, 43, 0.12);
+}
+
+/* =========================================
+   8. LISTA E CARTÕES DAS UNIDADES
+========================================= */
+
+.lista-unidades {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+}
+
+.cartao-unidade {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-width: 0;
+    padding: 16px;
+    border: 1px solid var(--borda);
+    border-radius: 13px;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    transition:
+        border-color 0.2s ease,
+        background-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.cartao-unidade:hover {
+    border-color: #B9C6B1;
+    background-color: #FCFBF6;
+}
+
+/* Destaque da unidade selecionada */
+
+.cartao-unidade.selecionada {
+    padding: 15px;
+    border: 2px solid var(--verde);
+    background-color: #F0F3E9;
+    box-shadow: 0 3px 10px rgba(33, 72, 43, 0.06);
+}
+
+/* Ícone da unidade */
+
+.icone-unidade {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 46px;
+    height: 46px;
+    border-radius: 11px;
+    background-color: var(--bege);
+    color: var(--verde);
+    font-size: 22px;
+}
+
+/* Nome e endereço da unidade */
+
+.informacoes-unidade {
+    flex: 1;
+    min-width: 0;
+}
+
+.informacoes-unidade h2 {
+    margin: 0 0 4px;
+    color: var(--texto);
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.informacoes-unidade p {
+    margin: 0;
+    color: var(--texto-suave);
+    font-size: 13px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+/* Botão circular de seleção */
+
+.selecao-unidade {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    margin: 0;
+    accent-color: var(--verde);
+    cursor: pointer;
+}
+
+/* Mensagem exibida quando nenhuma unidade é encontrada */
+
+.mensagem-vazia {
+    margin: 16px 0;
+    padding: 16px;
+    border: 1px dashed var(--borda);
+    border-radius: 11px;
+    color: var(--texto-suave);
+    font-size: 14px;
+    text-align: center;
+}
+
+/* =========================================
+   9. BOTÃO PRINCIPAL
+========================================= */
+
+.botao-principal {
+    display: block;
+    width: 100%;
+    min-height: 50px;
+    margin: 24px auto 0;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 11px;
+    background-color: var(--verde);
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.botao-principal:hover:not(:disabled) {
+    background-color: var(--verde-claro);
+}
+
+.botao-principal:active:not(:disabled) {
+    transform: scale(0.99);
+}
+
+.botao-principal:disabled {
+    background-color: #C9C7BF;
+    color: #FFFFFF;
+    cursor: not-allowed;
+}
+
+/* Texto auxiliar abaixo do botão */
+
+.texto-apoio {
+    margin: 14px 0 0;
+    color: var(--texto-suave);
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* =========================================
+   10. ACESSO DA EQUIPE
+   Posicionado abaixo da escolha de unidade.
+   Atualmente, somente a cozinha está disponível.
+========================================= */
+
+.acesso-equipe {
+    width: 100%;
+    max-width: 850px;
+    margin: 34px auto 0;
+    padding: 24px;
+    background-color: rgba(255, 253, 248, 0.65);
+    border: 1px solid var(--borda);
+    border-radius: 18px;
+}
+
+/* Cabeçalho da área restrita */
+
+.cabecalho-equipe {
+    margin-bottom: 20px;
+}
+
+.etiqueta-equipe {
+    display: inline-block;
+    margin-bottom: 6px;
+    color: var(--terracota);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.cabecalho-equipe h2 {
+    margin: 0 0 6px;
+    color: var(--verde);
+    font-size: 20px;
+    line-height: 1.3;
+}
+
+.cabecalho-equipe p {
+    margin: 0;
+    color: var(--texto-suave);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Uma única opção de acesso ocupa toda a largura */
+
+.opcoes-equipe {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+}
+
+/* Cartão clicável da cozinha */
+
+.cartao-equipe {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    min-width: 0;
+    padding: 15px;
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+    background-color: var(--branco);
+    color: var(--texto);
+    text-decoration: none;
+    transition:
+        border-color 0.2s ease,
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.cartao-equipe:hover {
+    border-color: var(--verde);
+    background-color: #F9F8F0;
+}
+
+.cartao-equipe:active {
+    transform: scale(0.99);
+}
+
+/* Ícone da cozinha */
+
+.icone-equipe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    background-color: var(--verde-suave);
+    color: var(--verde);
+    font-size: 23px;
+}
+
+/* Texto do cartão */
+
+.texto-equipe {
+    flex: 1;
+    min-width: 0;
+}
+
+.texto-equipe strong,
+.texto-equipe small {
+    display: block;
+}
+
+.texto-equipe strong {
+    margin-bottom: 4px;
+    color: var(--verde);
+    font-size: 15px;
+}
+
+.texto-equipe small {
+    color: var(--texto-suave);
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* Seta indicativa de acesso */
+
+.seta-equipe {
+    flex-shrink: 0;
+    color: var(--verde);
+    font-size: 22px;
+}
+
+/* Aviso de acesso restrito */
+
+.aviso-equipe {
+    margin: 18px 0 0;
+    color: var(--texto-suave);
+    font-size: 11px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* =========================================
+   11. TELAS MÉDIAS E DESKTOP
+========================================= */
+
+@media (min-width: 600px) {
+    .lista-unidades {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .botao-principal {
+        max-width: 360px;
+    }
+}
+
+@media (min-width: 768px) {
+    .pagina {
+        padding: 20px 24px 48px;
+    }
+
+    .cabecalho {
+        padding: 8px 0 28px;
+    }
+
+    .imagem-logo {
+        width: 240px;
+    }
+
+    .conteudo {
+        padding: 32px;
+    }
+
+    .acesso-equipe {
+        padding: 24px;
+    }
+
+    .cartao-equipe {
+        padding: 17px;
+    }
+}
+
+/* =========================================
+   12. AJUSTES PARA CELULAR
+========================================= */
+
+@media (max-width: 599px) {
+    .pagina {
+        padding: 12px 12px 32px;
+    }
+
+    .cabecalho {
+        padding: 8px 0 18px;
+    }
+
+    .imagem-logo {
+        width: 190px;
+    }
+
+    .conteudo {
+        padding: 22px 17px;
+        border-radius: 16px;
+    }
+
+    .introducao {
+        margin-bottom: 23px;
+    }
+
+    .introducao p {
+        font-size: 14px;
+    }
+
+    .campo-busca {
+        margin-bottom: 17px;
+    }
+
+    .lista-unidades {
+        gap: 10px;
+    }
+
+    .cartao-unidade {
+        padding: 13px;
+        gap: 11px;
+    }
+
+    .cartao-unidade.selecionada {
+        padding: 12px;
+    }
+
+    .icone-unidade {
+        width: 42px;
+        height: 42px;
+    }
+
+    .informacoes-unidade h2 {
+        font-size: 15px;
+    }
+
+    .informacoes-unidade p {
+        font-size: 12px;
+    }
+
+    .botao-principal {
+        margin-top: 20px;
+    }
+
+    .acesso-equipe {
+        margin-top: 24px;
+        padding: 18px;
+        border-radius: 15px;
+    }
+
+    .cabecalho-equipe h2 {
+        font-size: 18px;
+    }
+
+    .cartao-equipe {
+        padding: 13px;
+        gap: 11px;
+    }
+
+    .icone-equipe {
+        width: 42px;
+        height: 42px;
+        font-size: 21px;
+    }
+
+    .texto-equipe small {
+        font-size: 12px;
+    }
+
+    .aviso-equipe {
+        margin-top: 14px;
+    }
+}
+
+/* =========================================
+   13. ACESSIBILIDADE
+   Reduz animações para quem prefere menos movimento.
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Revisão do pedido | Raízes do Nordeste</title>
+
+    <!-- Estilos compartilhados do projeto -->
+    <link rel="stylesheet" href="css/tema.css">
+    <link rel="stylesheet" href="css/revisao.css">
+    <link rel="stylesheet" href="css/menu-inferior.css">
+    <link rel="stylesheet" href="css/logo.css">
+
+    <!-- Funcionalidades da página -->
+    <script src="js/auth.js" defer></script>
+    <script src="js/utilitarios.js" defer></script>
+    <script src="js/revisao.js" defer></script>
+    <script src="js/menu-inferior.js" defer></script>
+</head>
+
+<body>
+
+    <main class="pagina">
+
+        <!-- Cabeçalho com navegação e logo -->
+        <header class="cabecalho">
+
+            <a href="carrinho.html" class="link-voltar">
+                ← Voltar ao carrinho
+            </a>
+
+            <a href="index.html" class="logo" aria-label="Raízes do Nordeste - Início">
+                <img
+                    src="imagens/logo-raizes-nordeste.png"
+                    alt="Raízes do Nordeste — Sabores que aproximam"
+                    class="imagem-logo"
+                >
+            </a>
+
+        </header>
+
+        <section class="introducao">
+            <span class="etiqueta">QUASE LÁ!</span>
+            <h1 class="titulo-pagina">Revise seu pedido</h1>
+            <p class="descricao-pagina">
+                Confira os itens, a unidade de retirada e os valores antes de continuar.
+            </p>
+        </section>
+
+        <!-- Unidade em que o pedido será retirado -->
+        <section class="secao-unidade" aria-labelledby="titulo-unidade">
+
+            <h2 id="titulo-unidade">Unidade de retirada</h2>
+
+            <div class="cartao-unidade">
+
+                <span class="icone-unidade" aria-hidden="true">📍</span>
+
+                <div class="dados-unidade">
+                    <strong id="nome-unidade">Carregando unidade...</strong>
+                    <p id="endereco-unidade"></p>
+                </div>
+
+                <a href="index.html" class="link-alterar">
+                    Alterar
+                </a>
+
+            </div>
+
+        </section>
+
+        <!-- Produtos recuperados do carrinho -->
+        <section class="secao-itens" aria-labelledby="titulo-itens">
+
+            <h2 id="titulo-itens">Itens do pedido</h2>
+
+            <div id="lista-revisao" class="lista-revisao"></div>
+
+            <p id="mensagem-vazia" class="mensagem-vazia" hidden>
+                Seu carrinho está vazio.
+                <a href="cardapio.html">Voltar ao cardápio</a>
+            </p>
+
+        </section>
+
+        <!-- Programa de fidelidade -->
+        <section class="secao-fidelidade" aria-labelledby="titulo-fidelidade">
+
+            <div class="cabecalho-fidelidade">
+                <span class="icone-fidelidade" aria-hidden="true">✦</span>
+
+                <div>
+                    <h2 id="titulo-fidelidade">Programa de fidelidade</h2>
+                    <p>Ganhe pontos e aproveite descontos nos seus pedidos.</p>
+                </div>
+            </div>
+
+            <p id="pontos-ganhos" class="pontos-ganhos">
+                Você poderá ganhar pontos com este pedido.
+            </p>
+
+            <label class="opcao-pontos" for="usar-pontos">
+                <input type="checkbox" id="usar-pontos">
+                <span>Quero usar meus pontos neste pedido</span>
+            </label>
+
+            <p id="aviso-pontos" class="aviso-pontos">
+                A cada R$ 1,00 pago, você ganha 1 ponto.
+                A cada 100 pontos, pode obter R$ 5,00 de desconto.
+            </p>
+
+            <a href="fidelidade.html" id="link-fidelidade" class="link-fidelidade">
+                Consultar minha fidelidade →
+            </a>
+
+        </section>
+
+        <!-- Resumo dos valores do pedido -->
+        <section class="secao-total" aria-labelledby="titulo-resumo">
+
+            <h2 id="titulo-resumo">Resumo dos valores</h2>
+
+            <div class="linha-total">
+                <span>Subtotal</span>
+                <span id="subtotal">R$ 0,00</span>
+            </div>
+
+            <div class="linha-total">
+                <span>Frete</span>
+                <span id="frete">R$ 0,00</span>
+            </div>
+
+            <div class="linha-total">
+                <span>Desconto por pontos</span>
+                <span id="desconto-pontos">R$ 0,00</span>
+            </div>
+
+            <div class="linha-total valor-final">
+                <strong>Total do pedido</strong>
+                <strong id="total">R$ 0,00</strong>
+            </div>
+
+            <p class="aviso-retirada">
+                O pedido será preparado para retirada na unidade selecionada.
+            </p>
+
+        </section>
+
+        <!-- Ações da revisão -->
+        <div class="acoes-revisao">
+
+            <a href="cardapio.html" class="botao-secundario">
+                Continuar pedindo
+            </a>
+
+            <button
+                type="button"
+                id="finalizar-pedido"
+                class="botao-principal"
+            >
+                Ir para o pagamento
+            </button>
+
+        </div>
+
+        <!-- Mensagens de retorno -->
+        <p id="mensagem-final" class="mensagem-final" role="status" aria-live="polite"></p>
+
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,239 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Meu perfil | Raízes do Nordeste</title>
+
+    <!-- Estilos compartilhados -->
+    <link rel="stylesheet" href="css/tema.css">
+    <link rel="stylesheet" href="css/perfil.css">
+    <link rel="stylesheet" href="css/menu-inferior.css">
+    <link rel="stylesheet" href="css/logo.css">
+
+    <!-- Funcionalidades -->
+    <script src="js/auth.js" defer></script>
+    <script src="js/perfil.js" defer></script>
+    <script src="js/menu-inferior.js" defer></script>
+</head>
+
+<body>
+
+    <main class="pagina">
+
+        <!-- Cabeçalho com a logo -->
+        <header class="cabecalho">
+            <a href="index.html" class="logo"
+                aria-label="Raízes do Nordeste - Início">
+
+                <img
+                    src="imagens/logo-raizes-nordeste.png"
+                    alt="Raízes do Nordeste — Sabores que aproximam"
+                    class="imagem-logo"
+                >
+
+            </a>
+        </header>
+
+        <!-- Conteúdo do perfil -->
+        <section class="conteudo">
+
+            <a href="index.html" class="link-voltar">
+                ← Voltar para o início
+            </a>
+
+            <h1>Meu perfil</h1>
+
+            <p class="descricao-pagina">
+                Consulte seus dados e gerencie sua conta.
+            </p>
+
+            <!-- Dados do cliente conectado -->
+            <section class="cartao-perfil">
+
+                <div class="avatar" aria-hidden="true">
+                    <span>♙</span>
+                </div>
+
+                <div class="dados-cliente">
+                    <p class="identificacao-cliente">Minha conta</p>
+
+                    <h2 id="nome-cliente">Cliente</h2>
+
+                    <p id="email-cliente">
+                        E-mail não informado
+                    </p>
+                </div>
+
+            </section>
+
+            <!-- Opções da conta -->
+            <section class="secao-opcoes">
+
+                <h2>Minha conta</h2>
+
+                <nav class="opcoes-perfil" aria-label="Opções do perfil">
+
+                    <a href="acompanhamento.html" class="opcao-perfil">
+                        <span class="icone-opcao" aria-hidden="true">▤</span>
+
+                        <span class="texto-opcao">
+                            <strong>Meus pedidos</strong>
+                            <small>Acompanhe seu pedido</small>
+                        </span>
+
+                        <span class="seta-opcao" aria-hidden="true">›</span>
+                    </a>
+
+                    <a href="fidelidade.html" class="opcao-perfil">
+                        <span class="icone-opcao" aria-hidden="true">☆</span>
+
+                        <span class="texto-opcao">
+                            <strong>Minha fidelidade</strong>
+                            <small>Consulte seus pontos e benefícios</small>
+                        </span>
+
+                        <span class="seta-opcao" aria-hidden="true">›</span>
+                    </a>
+
+                    <button
+                        type="button"
+                        id="botao-alterar-senha"
+                        class="opcao-perfil"
+                        aria-controls="area-alterar-senha"
+                        aria-expanded="false"
+                    >
+                        <span class="icone-opcao" aria-hidden="true">♙</span>
+
+                        <span class="texto-opcao">
+                            <strong>Alterar senha</strong>
+                            <small>Gerencie sua senha de acesso</small>
+                        </span>
+
+                        <span class="seta-opcao" aria-hidden="true">›</span>
+                    </button>
+
+                </nav>
+
+            </section>
+
+            <!-- Área de alteração de senha -->
+            <section
+                id="area-alterar-senha"
+                class="area-alterar-senha"
+                hidden
+            >
+
+                <h2>Alterar senha</h2>
+
+                <p class="descricao-formulario">
+                    Preencha os campos abaixo para simular a alteração.
+                </p>
+
+                <form id="form-alterar-senha">
+
+                    <div class="campo-perfil">
+                        <label for="nova-senha">Nova senha</label>
+
+                        <input
+                            type="password"
+                            id="nova-senha"
+                            minlength="8"
+                            autocomplete="new-password"
+                            placeholder="Digite uma nova senha"
+                            required
+                        >
+                    </div>
+
+                    <div class="campo-perfil">
+                        <label for="confirmar-nova-senha">
+                            Confirmar nova senha
+                        </label>
+
+                        <input
+                            type="password"
+                            id="confirmar-nova-senha"
+                            minlength="8"
+                            autocomplete="new-password"
+                            placeholder="Digite a senha novamente"
+                            required
+                        >
+                    </div>
+
+                    <button type="submit" class="botao-confirmar">
+                        Confirmar alteração
+                    </button>
+
+                    <button
+                        type="button"
+                        id="botao-cancelar-senha"
+                        class="botao-cancelar"
+                    >
+                        Cancelar
+                    </button>
+
+                </form>
+
+                <p
+                    id="mensagem-senha"
+                    role="status"
+                    aria-live="polite"
+                ></p>
+
+            </section>
+
+            <!-- Ações da conta -->
+            <section class="secao-acoes">
+
+                <h2>Segurança da conta</h2>
+
+                <div class="cartao-acoes">
+
+                    <button
+                        type="button"
+                        id="botao-sair"
+                        class="acao-conta"
+                    >
+                        <span class="icone-acao" aria-hidden="true">↪</span>
+
+                        <span class="texto-acao">
+                            <strong>Sair da conta</strong>
+                            <small>Encerrar sua sessão neste dispositivo</small>
+                        </span>
+
+                        <span class="seta-opcao" aria-hidden="true">›</span>
+                    </button>
+
+                    <button
+                        type="button"
+                        id="botao-excluir-conta"
+                        class="acao-conta botao-excluir"
+                    >
+                        <span class="icone-acao" aria-hidden="true">×</span>
+
+                        <span class="texto-acao">
+                            <strong>Excluir conta</strong>
+                            <small>Encerrar o acesso à conta</small>
+                        </span>
+
+                        <span class="seta-opcao" aria-hidden="true">›</span>
+                    </button>
+
+                </div>
+
+            </section>
+
+        </section>
+
+        <!-- Rodapé -->
+        <footer class="rodape">
+            Raízes do Nordeste — Sabores que aproximam.
+        </footer>
+
+    </main>
+
+</body>
+</html>

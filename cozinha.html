@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pedidos da cozinha | Raízes do Nordeste</title>
+
+    <!-- Estilos compartilhados -->
+    <link rel="stylesheet" href="css/tema.css">
+    <link rel="stylesheet" href="css/cozinha.css">
+    <link rel="stylesheet" href="css/logo.css">
+
+    <!-- Funcionalidades -->
+    <script src="js/utilitarios.js" defer></script>
+    <script src="js/cozinha.js" defer></script>
+</head>
+
+<body>
+
+    <main class="pagina">
+
+        <!-- Cabeçalho -->
+        <header class="cabecalho">
+            <a
+                href="index.html"
+                class="logo"
+                aria-label="Raízes do Nordeste - Página inicial"
+            >
+                <img
+                    src="imagens/logo-raizes-nordeste.png"
+                    alt="Raízes do Nordeste — Sabores que aproximam"
+                    class="imagem-logo"
+                >
+            </a>
+
+            <div class="identificacao-cozinha">
+                <span class="indicador-online" aria-hidden="true"></span>
+                <span>Painel da cozinha</span>
+            </div>
+        </header>
+
+        <!-- Apresentação da página -->
+        <section class="introducao" aria-labelledby="titulo-pagina">
+            <div>
+                <p class="texto-superior">ÁREA DE PREPARO</p>
+
+                <h1 id="titulo-pagina">Pedidos da cozinha</h1>
+
+                <p class="texto-descricao">
+                    Organize os pedidos e acompanhe cada etapa
+                    até a retirada pelo cliente.
+                </p>
+            </div>
+        </section>
+
+        <!-- Resumo dos pedidos -->
+        <section class="resumo-pedidos" aria-label="Resumo dos pedidos">
+
+            <article class="cartao-resumo aguardando">
+                <span class="resumo-icone" aria-hidden="true">◷</span>
+
+                <div>
+                    <p>Aguardando</p>
+                    <strong id="contador-aguardando">0</strong>
+                    <span class="descricao-resumo">Aguardando preparo</span>
+                </div>
+            </article>
+
+            <article class="cartao-resumo preparando">
+                <span class="resumo-icone" aria-hidden="true">♨</span>
+
+                <div>
+                    <p>Em preparo</p>
+                    <strong id="contador-preparando">0</strong>
+                    <span class="descricao-resumo">Sendo preparados</span>
+                </div>
+            </article>
+
+            <article class="cartao-resumo pronto">
+                <span class="resumo-icone" aria-hidden="true">✓</span>
+
+                <div>
+                    <p>Prontos</p>
+                    <strong id="contador-pronto">0</strong>
+                    <span class="descricao-resumo">Aguardando retirada</span>
+                </div>
+            </article>
+
+        </section>
+
+        <!-- Lista e filtros -->
+        <section class="secao-pedidos" aria-labelledby="titulo-lista-pedidos">
+
+            <div class="cabecalho-lista">
+                <div>
+                    <h2 id="titulo-lista-pedidos">Pedidos recebidos</h2>
+
+                    <p>
+                        Selecione uma etapa para organizar a visualização.
+                    </p>
+                </div>
+            </div>
+
+            <div class="seletor-unidade-admin">
+                <label for="unidade-cozinha">Unidade que deseja consultar</label>
+                <select id="unidade-cozinha" required>
+                    <option value="Unidade 1">Unidade 1</option>
+                    <option value="Unidade 2">Unidade 2</option>
+                </select>
+            </div>
+
+            <nav class="filtros" aria-label="Filtrar pedidos">
+
+                <button
+                    type="button"
+                    class="filtro ativo"
+                    data-filtro="todos"
+                    aria-pressed="true"
+                >
+                    Todos
+                </button>
+
+                <button
+                    type="button"
+                    class="filtro"
+                    data-filtro="aguardando"
+                    aria-pressed="false"
+                >
+                    Aguardando
+                </button>
+
+                <button
+                    type="button"
+                    class="filtro"
+                    data-filtro="preparando"
+                    aria-pressed="false"
+                >
+                    Em preparo
+                </button>
+
+                <button
+                    type="button"
+                    class="filtro"
+                    data-filtro="pronto"
+                    aria-pressed="false"
+                >
+                    Prontos
+                </button>
+
+                <button
+                    type="button"
+                    class="filtro"
+                    data-filtro="retirado"
+                    aria-pressed="false"
+                >
+                    Retirados
+                </button>
+
+            </nav>
+
+            <!-- Os cartões são criados pelo JavaScript -->
+            <section
+                id="lista-pedidos"
+                class="lista-pedidos"
+                aria-label="Lista de pedidos"
+            ></section>
+
+            <!-- Mensagem quando não existem pedidos no filtro -->
+            <div
+                id="mensagem-vazia"
+                class="mensagem-vazia"
+                role="status"
+                hidden
+            >
+                <span class="icone-vazio" aria-hidden="true">✓</span>
+
+                <h2>Nenhum pedido por aqui</h2>
+
+                <p>
+                    Quando houver pedidos nesta etapa,
+                    eles aparecerão aqui.
+                </p>
+            </div>
+
+        </section>
+
+        <!-- Rodapé -->
+        <footer class="rodape">
+            Raízes do Nordeste — Sabores que aproximam.
+        </footer>
+
+    </main>
+
+</body>
+</html>
