@@ -97,7 +97,7 @@ if (!AuthRaizes.estaLogado()) {
     });
 
     // =========================================
-    // 6. SIMULAR A ALTERAÇÃO DE SENHA
+    // 6.  ALTERAÇÃO DE SENHA
     // =========================================
 
     formularioSenha.addEventListener("submit", function (evento) {
@@ -121,11 +121,6 @@ if (!AuthRaizes.estaLogado()) {
                 "As senhas não coincidem. Confira os campos.";
             return;
         }
-
-        /*
-         * SIMULAÇÃO DO PROTÓTIPO:
-         * Nenhuma senha real é alterada ou armazenada.
-         */
 
         mensagemSenha.textContent =
             "Validação concluída! Sua senha foi alterada com sucesso.";
@@ -171,12 +166,6 @@ if (!AuthRaizes.estaLogado()) {
         if (!confirmou) {
             return;
         }
-
-        /*
-         * SIMULAÇÃO:
-         * Não existe exclusão real de cadastro,
-         * pois o protótipo não possui banco de dados.
-         */
 
         AuthRaizes.sair();
 

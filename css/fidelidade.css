@@ -1,5 +1,5 @@
 /* =========================================
-   1. CONFIGURAÇÕES GERAIS
+    CONFIGURAÇÕES GERAIS
 ========================================= */
 
 * {
@@ -31,7 +31,7 @@ a:focus-visible {
 }
 
 /* =========================================
-   2. ESTRUTURA DA PÁGINA
+    ESTRUTURA DA PÁGINA
 ========================================= */
 
 .pagina {
@@ -45,7 +45,7 @@ a:focus-visible {
 }
 
 /* =========================================
-   3. CABEÇALHO E LOGO
+    CABEÇALHO E LOGO
 ========================================= */
 
 .cabecalho {
@@ -71,7 +71,7 @@ a:focus-visible {
 }
 
 /* =========================================
-   4. CARTÃO PRINCIPAL
+    CARTÃO PRINCIPAL
 ========================================= */
 
 .conteudo {
@@ -86,7 +86,7 @@ a:focus-visible {
 }
 
 /* =========================================
-   5. INTRODUÇÃO
+    INTRODUÇÃO
 ========================================= */
 
 .introducao-fidelidade {
@@ -119,7 +119,7 @@ a:focus-visible {
 }
 
 /* =========================================
-   6. CARTÃO DE PONTOS
+    CARTÃO DE PONTOS
 ========================================= */
 
 .cartao-pontos {
@@ -214,7 +214,7 @@ a:focus-visible {
 }
 
 /* =========================================
-   7. COMO FUNCIONA
+    COMO FUNCIONA
 ========================================= */
 
 .informacoes-fidelidade {
@@ -267,7 +267,7 @@ a:focus-visible {
 }
 
 /* =========================================
-   8. BOTÕES DE AÇÃO
+    BOTÕES DE AÇÃO
 ========================================= */
 
 .acoes-fidelidade {
@@ -331,7 +331,7 @@ a:focus-visible {
 }
 
 /* =========================================
-   9. MENSAGEM DINÂMICA
+    MENSAGEM DINÂMICA
 ========================================= */
 
 .mensagem-fidelidade {
@@ -357,7 +357,7 @@ a:focus-visible {
 }
 
 /* =========================================
-   10. RODAPÉ
+    RODAPÉ
 ========================================= */
 
 .rodape {
@@ -382,7 +382,7 @@ a:focus-visible {
 }
 
 /* =========================================
-   11. TABLETS E DESKTOP
+    TABLETS E DESKTOP
 ========================================= */
 
 @media (min-width: 600px) {
@@ -438,7 +438,7 @@ a:focus-visible {
 }
 
 /* =========================================
-   12. CELULARES ESTREITOS
+    CELULARES ESTREITOS
 ========================================= */
 
 @media (max-width: 360px) {
@@ -482,7 +482,7 @@ a:focus-visible {
 }
 
 /* =========================================
-   13. ACESSIBILIDADE
+    ACESSIBILIDADE
 ========================================= */
 
 @media (prefers-reduced-motion: reduce) {

@@ -3,12 +3,8 @@
    AUTENTICAÇÃO DEMONSTRATIVA DO PROJETO
 
    Este arquivo simula o login no navegador.
-   Não verifica senhas reais e não substitui um backend.
+   Não verifica senhas reais.
 
-   Importante:
-   - Nunca armazenamos senhas.
-   - Os dados ficam somente no navegador.
-   - Esta autenticação serve apenas para o protótipo.
 ========================================= */
 
 (function () {

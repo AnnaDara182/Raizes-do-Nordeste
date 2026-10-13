@@ -1,5 +1,5 @@
 /* =========================================
-   1. CONFIGURAÇÕES GERAIS
+    CONFIGURAÇÕES GERAIS
 ========================================= */
 
 * {
@@ -23,7 +23,7 @@ body {
 }
 
 /* =========================================
-   2. CABEÇALHO
+    CABEÇALHO
 ========================================= */
 
 .cabecalho {
@@ -58,7 +58,7 @@ body {
 /* O tamanho da imagem da logo é controlado por css/logo.css */
 
 /* =========================================
-   3. INFORMAÇÕES DO PRATO
+    INFORMAÇÕES DO PRATO
 ========================================= */
 
 .produto {
@@ -91,7 +91,7 @@ body {
 }
 
 /* =========================================
-   4. SEÇÃO DE PERSONALIZAÇÃO
+    SEÇÃO DE PERSONALIZAÇÃO
 ========================================= */
 
 .secao-personalizacao {
@@ -170,7 +170,7 @@ body {
 }
 
 /* =========================================
-   5. CONTROLES DE QUANTIDADE
+    CONTROLES DE QUANTIDADE
 ========================================= */
 
 .controle-quantidade {
@@ -213,7 +213,7 @@ body {
 }
 
 /* =========================================
-   6. CAMPO PARA RETIRAR INGREDIENTES
+    CAMPO PARA RETIRAR INGREDIENTES
 ========================================= */
 
 .campo-retirar {
@@ -253,7 +253,7 @@ body {
 }
 
 /* =========================================
-   7. RESUMO DOS VALORES
+    RESUMO DOS VALORES
 ========================================= */
 
 .resumo {
@@ -294,7 +294,7 @@ body {
 }
 
 /* =========================================
-   8. BOTÃO PRINCIPAL
+    BOTÃO PRINCIPAL
 ========================================= */
 
 .botao-principal {
@@ -325,7 +325,7 @@ body {
 }
 
 /* =========================================
-   9. MENSAGEM DE RETORNO
+    MENSAGEM DE RETORNO
 ========================================= */
 
 .mensagem {
@@ -336,7 +336,7 @@ body {
 }
 
 /* =========================================
-   10. TELAS MAIORES
+    TELAS MAIORES
 ========================================= */
 
 @media (min-width: 768px) {
@@ -375,7 +375,7 @@ body {
 }
 
 /* =========================================
-   11. CELULARES PEQUENOS
+    CELULARES PEQUENOS
 ========================================= */
 
 @media (max-width: 380px) {

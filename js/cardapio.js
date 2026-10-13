@@ -1,7 +1,5 @@
 /* =========================================
    1. PRODUTOS DO CARDÁPIO
-   Os IDs devem continuar compatíveis com
-   personalizar.js e com os demais arquivos.
 ========================================= */
 
 const produtos = [

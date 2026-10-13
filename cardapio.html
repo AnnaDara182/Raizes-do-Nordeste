@@ -29,39 +29,21 @@
         <!-- Cabeçalho: logo e acesso ao carrinho -->
         <header class="cabecalho">
 
-            <a
-                href="index.html"
-                class="logo"
-                aria-label="Raízes do Nordeste - Página inicial"
-            >
-                <img
-                    src="imagens/logo-raizes-nordeste.png"
-                    alt="Raízes do Nordeste — Sabores que aproximam"
-                    class="imagem-logo"
-                >
+            <a href="index.html" class="logo" aria-label="Raízes do Nordeste - Página inicial">
+                <img src="imagens/logo-raizes-nordeste.png" alt="Raízes do Nordeste — Sabores que aproximam"
+                    class="imagem-logo">
             </a>
 
-            <button
-                type="button"
-                class="botao-carrinho"
-                id="abrir-carrinho"
-                aria-label="Abrir carrinho"
-            >
+            <button type="button" class="botao-carrinho" id="abrir-carrinho" aria-label="Abrir carrinho">
                 <span class="icone-carrinho" aria-hidden="true">🛒</span>
-                <span
-                    id="quantidade-carrinho"
-                    class="quantidade-carrinho"
-                    aria-label="Quantidade de itens no carrinho"
-                >0</span>
+                <span id="quantidade-carrinho" class="quantidade-carrinho"
+                    aria-label="Quantidade de itens no carrinho">0</span>
             </button>
 
         </header>
 
         <!-- Unidade selecionada pelo cliente -->
-        <section
-            class="informacoes-loja"
-            aria-labelledby="nome-unidade"
-        >
+        <section class="informacoes-loja" aria-labelledby="nome-unidade">
 
             <div class="dados-loja">
                 <span class="etiqueta-secao">NOSSA UNIDADE</span>
@@ -88,61 +70,33 @@
 
             <span class="icone-busca" aria-hidden="true">⌕</span>
 
-            <input
-                type="search"
-                id="buscar-produto"
-                placeholder="O que você deseja comer?"
-                autocomplete="off"
-            >
+            <input type="search" id="buscar-produto" placeholder="O que você deseja comer?" autocomplete="off">
 
         </section>
 
         <!-- Categorias disponíveis -->
         <nav class="filtros" aria-label="Categorias do cardápio">
 
-            <button
-                type="button"
-                class="filtro ativo"
-                data-categoria="Todos"
-                aria-pressed="true"
-            >
+            <button type="button" class="filtro ativo" data-categoria="Todos" aria-pressed="true">
                 Tudo
             </button>
 
-            <button
-                type="button"
-                class="filtro"
-                data-categoria="Comida"
-                aria-pressed="false"
-            >
+            <button type="button" class="filtro" data-categoria="Comida" aria-pressed="false">
                 Comidas
             </button>
 
-            <button
-                type="button"
-                class="filtro"
-                data-categoria="Bebidas"
-                aria-pressed="false"
-            >
+            <button type="button" class="filtro" data-categoria="Bebidas" aria-pressed="false">
                 Bebidas
             </button>
 
-            <button
-                type="button"
-                class="filtro"
-                data-categoria="Sobremesa"
-                aria-pressed="false"
-            >
+            <button type="button" class="filtro" data-categoria="Sobremesa" aria-pressed="false">
                 Sobremesas
             </button>
 
         </nav>
 
         <!-- Título da lista de produtos -->
-        <section
-            class="secao-produtos"
-            aria-labelledby="titulo-cardapio"
-        >
+        <section class="secao-produtos" aria-labelledby="titulo-cardapio">
 
             <div class="cabecalho-produtos">
                 <div>
@@ -153,19 +107,10 @@
             </div>
 
             <!-- Os cartões dos produtos são criados pelo JavaScript -->
-            <div
-                id="lista-produtos"
-                class="lista-produtos"
-                aria-label="Produtos disponíveis"
-            ></div>
+            <div id="lista-produtos" class="lista-produtos" aria-label="Produtos disponíveis"></div>
 
             <!-- Mensagem para pesquisas sem resultados -->
-            <p
-                id="mensagem-vazia"
-                class="mensagem-vazia"
-                role="status"
-                hidden
-            >
+            <p id="mensagem-vazia" class="mensagem-vazia" role="status" hidden>
                 Não encontramos produtos com esse nome ou categoria.
                 Tente outra busca.
             </p>
@@ -173,11 +118,7 @@
         </section>
 
         <!-- Acesso à área de fidelidade -->
-        <a
-            href="fidelidade.html"
-            id="link-fidelidade"
-            class="botao-fidelidade"
-        >
+        <a href="fidelidade.html" id="link-fidelidade" class="botao-fidelidade">
             <span class="icone-fidelidade" aria-hidden="true">✦</span>
 
             <span class="texto-fidelidade">
@@ -196,4 +137,5 @@
     </main>
 
 </body>
+
 </html>

@@ -1,18 +1,160 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Painel da matriz | Raízes do Nordeste</title>
-<link rel="stylesheet" href="css/tema.css"><link rel="stylesheet" href="css/administracao.css"><link rel="stylesheet" href="css/logo.css">
-<script src="js/administracao.js" defer></script>
-</head><body><main class="pagina-admin">
-<header class="topo-admin"><a href="index.html"><img src="imagens/logo-raizes-nordeste.png" alt="Raízes do Nordeste" class="imagem-logo"></a><h1>Painel da matriz</h1><p>Acompanhe os resultados, os estoques e as operações das unidades.</p></header>
-<section class="painel-admin"><div class="campo-admin seletor-unidade-admin"><label for="unidade-matriz">Consultar dados</label><select id="unidade-matriz"><option value="todas">Todas as unidades</option><option value="Unidade 1">Unidade 1</option><option value="Unidade 2">Unidade 2</option></select></div><p class="texto-suave-admin">Escolha uma unidade para consultar seus indicadores, estoque, produtos mais pedidos e operações recentes.</p></section>
 
-<section class="painel-admin"><h2>Visão geral da rede</h2><div class="cartoes-indicador"><div class="indicador-admin"><span>Pedidos</span><strong id="matriz-pedidos">0</strong></div><div class="indicador-admin"><span>Vendas registradas</span><strong id="matriz-vendas">R$ 0,00</strong></div><div class="indicador-admin"><span>Pedidos em preparo</span><strong id="matriz-preparo">0</strong></div><div class="indicador-admin"><span>Pedidos prontos</span><strong id="matriz-prontos">0</strong></div></div></section>
-<section class="painel-admin"><h2>Vendas por unidade (visão geral)</h2><div class="tabela-wrap"><table><thead><tr><th>Unidade</th><th>Pedidos</th><th>Total vendido</th></tr></thead><tbody id="tabela-vendas-matriz"></tbody></table></div></section>
-<section class="painel-admin"><h2>Estoque da seleção</h2><div id="estoque-matriz"></div></section>
-<section class="painel-admin"><h2>Produtos mais pedidos</h2><div id="produtos-matriz"></div></section>
-<section class="painel-admin"><h2>Operações recentes</h2><p class="texto-suave-admin">Acompanhe os pedidos registrados e seus status para apoiar o controle operacional.</p><div class="tabela-wrap"><table><thead><tr><th>Pedido</th><th>Unidade</th><th>Status</th><th>Total</th></tr></thead><tbody id="operacoes-matriz"></tbody></table></div></section>
-<section class="painel-admin"><h2>Campanhas e fidelidade</h2><p>Promoções cadastradas: <strong id="quantidade-promocoes-matriz">0</strong></p><p>Regra atual: <strong id="regra-fidelidade-matriz">1 ponto por R$ 1,00 pago; 100 pontos = R$ 5,00.</strong></p><a class="botao-secundario-admin" href="gerente.html">Gerenciar promoções e fidelidade</a></section>
-<a class="voltar-admin" href="index.html">← Voltar para a página inicial</a></main></body></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Painel da matriz | Raízes do Nordeste</title>
+
+    <link rel="stylesheet" href="css/tema.css">
+    <link rel="stylesheet" href="css/administracao.css">
+    <link rel="stylesheet" href="css/logo.css">
+
+    <script src="js/administracao.js" defer></script>
+</head>
+
+<body>
+    <main class="pagina-admin">
+
+        <header class="topo-admin">
+            <a href="index.html">
+                <img
+                    src="imagens/logo-raizes-nordeste.png"
+                    alt="Raízes do Nordeste"
+                    class="imagem-logo"
+                >
+            </a>
+
+            <h1>Painel da matriz</h1>
+
+            <p>
+                Acompanhe os resultados, os estoques e as operações das unidades.
+            </p>
+        </header>
+
+        <section class="painel-admin">
+            <div class="campo-admin seletor-unidade-admin">
+                <label for="unidade-matriz">Consultar dados</label>
+
+                <select id="unidade-matriz">
+                    <option value="todas">Todas as unidades</option>
+                    <option value="Unidade 1">Unidade 1</option>
+                    <option value="Unidade 2">Unidade 2</option>
+                </select>
+            </div>
+
+            <p class="texto-suave-admin">
+                Escolha uma unidade para consultar seus indicadores, estoque,
+                produtos mais pedidos e operações recentes.
+            </p>
+        </section>
+
+        <section class="painel-admin">
+            <h2>Visão geral da rede</h2>
+
+            <div class="cartoes-indicador">
+                <div class="indicador-admin">
+                    <span>Pedidos</span>
+                    <strong id="matriz-pedidos">0</strong>
+                </div>
+
+                <div class="indicador-admin">
+                    <span>Vendas registradas</span>
+                    <strong id="matriz-vendas">R$ 0,00</strong>
+                </div>
+
+                <div class="indicador-admin">
+                    <span>Pedidos em preparo</span>
+                    <strong id="matriz-preparo">0</strong>
+                </div>
+
+                <div class="indicador-admin">
+                    <span>Pedidos prontos</span>
+                    <strong id="matriz-prontos">0</strong>
+                </div>
+            </div>
+        </section>
+
+        <section class="painel-admin">
+            <h2>Vendas por unidade (visão geral)</h2>
+
+            <div class="tabela-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Unidade</th>
+                            <th>Pedidos</th>
+                            <th>Total vendido</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tabela-vendas-matriz"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="painel-admin">
+            <h2>Estoque da seleção</h2>
+
+            <div id="estoque-matriz"></div>
+        </section>
+
+        <section class="painel-admin">
+            <h2>Produtos mais pedidos</h2>
+
+            <div id="produtos-matriz"></div>
+        </section>
+
+        <section class="painel-admin">
+            <h2>Operações recentes</h2>
+
+            <p class="texto-suave-admin">
+                Acompanhe os pedidos registrados e seus status para apoiar
+                o controle operacional.
+            </p>
+
+            <div class="tabela-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Pedido</th>
+                            <th>Unidade</th>
+                            <th>Status</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="operacoes-matriz"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="painel-admin">
+            <h2>Campanhas e fidelidade</h2>
+
+            <p>
+                Promoções cadastradas:
+                <strong id="quantidade-promocoes-matriz">0</strong>
+            </p>
+
+            <p>
+                Regra atual:
+                <strong id="regra-fidelidade-matriz">
+                    1 ponto por R$ 1,00 pago; 100 pontos = R$ 5,00.
+                </strong>
+            </p>
+
+            <a class="botao-secundario-admin" href="gerente.html">
+                Gerenciar promoções e fidelidade
+            </a>
+        </section>
+
+        <a class="voltar-admin" href="index.html">
+            ← Voltar para a página inicial
+        </a>
+
+    </main>
+</body>
+
+</html>

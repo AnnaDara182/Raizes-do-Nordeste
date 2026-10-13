@@ -1,15 +1,6 @@
 
 /* =========================================
-   TEMA VISUAL COMPARTILHADO
-   Raízes do Nordeste
-
-   As cores e os estilos gerais ficam aqui
-   para manter o mesmo padrão em todas as telas.
-========================================= */
-
-
-/* =========================================
-   1. CORES PRINCIPAIS DO PROJETO
+    CORES PRINCIPAIS DO PROJETO
 ========================================= */
 
 :root {
@@ -30,7 +21,7 @@
 
 
 /* =========================================
-   2. CONFIGURAÇÕES GERAIS
+    CONFIGURAÇÕES GERAIS
 ========================================= */
 
 /* Facilita o cálculo das dimensões dos elementos. */
@@ -64,7 +55,7 @@ body {
 
 
 /* =========================================
-   3. TÍTULOS E TEXTOS
+    TÍTULOS E TEXTOS
 ========================================= */
 
 h1,
@@ -92,7 +83,7 @@ a:hover {
 
 
 /* =========================================
-   4. CAMPOS DE FORMULÁRIO
+    CAMPOS DE FORMULÁRIO
 ========================================= */
 
 input,
@@ -129,7 +120,7 @@ textarea:focus-visible {
 
 
 /* =========================================
-   5. BOTÕES
+    BOTÕES
 ========================================= */
 
 button {
@@ -143,7 +134,7 @@ button:focus-visible {
 
 
 /* =========================================
-   6. IMAGENS
+    IMAGENS
 ========================================= */
 
 img {
@@ -157,7 +148,7 @@ svg {
 
 
 /* =========================================
-   7. ACESSIBILIDADE
+    ACESSIBILIDADE
 ========================================= */
 
 /* Mantém um destaque visível ao navegar pelo teclado. */
@@ -168,7 +159,7 @@ a:focus-visible {
 
 
 /* =========================================
-   8. AJUSTES PARA CELULARES
+    AJUSTES PARA CELULARES
 ========================================= */
 
 @media (max-width: 480px) {
@@ -179,7 +170,7 @@ a:focus-visible {
 
 
 /* =========================================
-   9. AJUSTES PARA TELAS MAIORES
+    AJUSTES PARA TELAS MAIORES
 ========================================= */
 
 @media (min-width: 768px) {

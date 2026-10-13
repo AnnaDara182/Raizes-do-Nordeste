@@ -1,9 +1,3 @@
-
-/* =========================================
-   PAINEL DA COZINHA
-   Raízes do Nordeste
-========================================= */
-
 /* Estrutura geral */
 
 .pagina {
@@ -430,10 +424,7 @@
 }
 
 
-/* =========================================
-   SELETOR DE UNIDADE DA COZINHA
-   Mantém o mesmo padrão visual do projeto.
-========================================= */
+/* SELETOR DE UNIDADE DA COZINHA */
 .seletor-unidade-admin {
     display: flex;
     flex-direction: column;

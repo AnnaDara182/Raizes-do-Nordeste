@@ -75,9 +75,6 @@ const pratos = {
 
 /* =========================================
    2. IDENTIFICAR O PRATO ESCOLHIDO
-
-   Exemplo de endereço:
-   personalizar.html?id=3
 ========================================= */
 
 // Lê o ID do prato enviado pela URL.

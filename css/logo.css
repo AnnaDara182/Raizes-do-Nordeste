@@ -1,15 +1,5 @@
-
 /* =========================================
-   LOGO COMPARTILHADA
-   Raízes do Nordeste
-
-   Mantém a proporção da imagem e padroniza
-   o tamanho nas diferentes telas.
-========================================= */
-
-
-/* =========================================
-   1. ESTILO GERAL
+    ESTILO GERAL
 ========================================= */
 
 .imagem-logo {
@@ -31,7 +21,7 @@
 
 
 /* =========================================
-   2. CELULARES PEQUENOS
+    CELULARES PEQUENOS
 ========================================= */
 
 @media (max-width: 360px) {
@@ -42,7 +32,7 @@
 
 
 /* =========================================
-   3. TABLETS E COMPUTADORES
+    TABLETS E COMPUTADORES
 ========================================= */
 
 @media (min-width: 768px) {
@@ -53,7 +43,7 @@
 
 
 /* =========================================
-   4. COMPUTADORES COM TELAS GRANDES
+    COMPUTADORES COM TELAS GRANDES
 ========================================= */
 
 @media (min-width: 1200px) {

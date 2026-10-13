@@ -1,5 +1,5 @@
 /* =========================================
-   1. CONFIGURAÇÕES GERAIS
+    CONFIGURAÇÕES GERAIS
 ========================================= */
 
 * {
@@ -46,7 +46,7 @@ input:focus-visible {
 }
 
 /* =========================================
-   2. ESTRUTURA PRINCIPAL
+    ESTRUTURA PRINCIPAL
 ========================================= */
 
 .pagina {
@@ -58,7 +58,7 @@ input:focus-visible {
 }
 
 /* =========================================
-   3. CABEÇALHO E LOGO
+    CABEÇALHO E LOGO
 ========================================= */
 
 .cabecalho {
@@ -88,7 +88,7 @@ input:focus-visible {
 }
 
 /* =========================================
-   4. BOTÃO DO CARRINHO
+    BOTÃO DO CARRINHO
 ========================================= */
 
 .botao-carrinho {
@@ -138,7 +138,7 @@ input:focus-visible {
 }
 
 /* =========================================
-   5. INFORMAÇÕES DA UNIDADE
+    INFORMAÇÕES DA UNIDADE
 ========================================= */
 
 .informacoes-loja {
@@ -201,7 +201,7 @@ input:focus-visible {
 }
 
 /* =========================================
-   6. CAMPO DE BUSCA
+    CAMPO DE BUSCA
 ========================================= */
 
 .busca {
@@ -259,7 +259,7 @@ input:focus-visible {
 }
 
 /* =========================================
-   7. FILTROS DE CATEGORIA
+    FILTROS DE CATEGORIA
 ========================================= */
 
 .filtros {
@@ -301,7 +301,7 @@ input:focus-visible {
 }
 
 /* =========================================
-   8. CABEÇALHO DA LISTA DE PRODUTOS
+    CABEÇALHO DA LISTA DE PRODUTOS
 ========================================= */
 
 .secao-produtos {
@@ -331,7 +331,7 @@ input:focus-visible {
 }
 
 /* =========================================
-   9. LISTA E CARTÕES DOS PRODUTOS
+    LISTA E CARTÕES DOS PRODUTOS
 ========================================= */
 
 /* No celular, os produtos aparecem um abaixo do outro. */
@@ -454,7 +454,7 @@ input:focus-visible {
 }
 
 /* =========================================
-   10. ACESSO AO PROGRAMA DE FIDELIDADE
+    ACESSO AO PROGRAMA DE FIDELIDADE
 ========================================= */
 
 .botao-fidelidade {
@@ -533,7 +533,7 @@ input:focus-visible {
 }
 
 /* =========================================
-   11. TABLETS E DESKTOP
+    TABLETS E DESKTOP
 ========================================= */
 
 @media (min-width: 600px) {
@@ -673,7 +673,7 @@ input:focus-visible {
 }
 
 /* =========================================
-   12. CELULARES ESTREITOS
+    CELULARES ESTREITOS
 ========================================= */
 
 @media (max-width: 380px) {
@@ -763,7 +763,7 @@ input:focus-visible {
 }
 
 /* =========================================
-   13. ACESSIBILIDADE
+    ACESSIBILIDADE
 ========================================= */
 
 @media (prefers-reduced-motion: reduce) {

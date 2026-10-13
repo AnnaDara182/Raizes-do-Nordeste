@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -24,16 +23,9 @@
 
         <!-- Cabeçalho -->
         <header class="cabecalho">
-            <a
-                href="index.html"
-                class="logo"
-                aria-label="Raízes do Nordeste - Página inicial"
-            >
-                <img
-                    src="imagens/logo-raizes-nordeste.png"
-                    alt="Raízes do Nordeste — Sabores que aproximam"
-                    class="imagem-logo"
-                >
+            <a href="index.html" class="logo" aria-label="Raízes do Nordeste - Página inicial">
+                <img src="imagens/logo-raizes-nordeste.png" alt="Raízes do Nordeste — Sabores que aproximam"
+                    class="imagem-logo">
             </a>
 
             <div class="identificacao-cozinha">
@@ -114,67 +106,33 @@
 
             <nav class="filtros" aria-label="Filtrar pedidos">
 
-                <button
-                    type="button"
-                    class="filtro ativo"
-                    data-filtro="todos"
-                    aria-pressed="true"
-                >
+                <button type="button" class="filtro ativo" data-filtro="todos" aria-pressed="true">
                     Todos
                 </button>
 
-                <button
-                    type="button"
-                    class="filtro"
-                    data-filtro="aguardando"
-                    aria-pressed="false"
-                >
+                <button type="button" class="filtro" data-filtro="aguardando" aria-pressed="false">
                     Aguardando
                 </button>
 
-                <button
-                    type="button"
-                    class="filtro"
-                    data-filtro="preparando"
-                    aria-pressed="false"
-                >
+                <button type="button" class="filtro" data-filtro="preparando" aria-pressed="false">
                     Em preparo
                 </button>
 
-                <button
-                    type="button"
-                    class="filtro"
-                    data-filtro="pronto"
-                    aria-pressed="false"
-                >
+                <button type="button" class="filtro" data-filtro="pronto" aria-pressed="false">
                     Prontos
                 </button>
 
-                <button
-                    type="button"
-                    class="filtro"
-                    data-filtro="retirado"
-                    aria-pressed="false"
-                >
+                <button type="button" class="filtro" data-filtro="retirado" aria-pressed="false">
                     Retirados
                 </button>
 
             </nav>
 
             <!-- Os cartões são criados pelo JavaScript -->
-            <section
-                id="lista-pedidos"
-                class="lista-pedidos"
-                aria-label="Lista de pedidos"
-            ></section>
+            <section id="lista-pedidos" class="lista-pedidos" aria-label="Lista de pedidos"></section>
 
             <!-- Mensagem quando não existem pedidos no filtro -->
-            <div
-                id="mensagem-vazia"
-                class="mensagem-vazia"
-                role="status"
-                hidden
-            >
+            <div id="mensagem-vazia" class="mensagem-vazia" role="status" hidden>
                 <span class="icone-vazio" aria-hidden="true">✓</span>
 
                 <h2>Nenhum pedido por aqui</h2>
@@ -195,4 +153,5 @@
     </main>
 
 </body>
+
 </html>

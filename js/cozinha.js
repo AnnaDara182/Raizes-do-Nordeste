@@ -65,13 +65,47 @@ const seletorUnidade = document.getElementById("unidade-cozinha");
 
 function obterUnidadePedido(pedido) {
     const unidade = pedido.unidade;
-    const valor = (typeof unidade === "string" || typeof unidade === "number")
-        ? unidade
-        : (unidade && unidade.nome) || pedido.nomeUnidade || pedido.unidadeSelecionada || pedido.unidadeNome || pedido.filial || pedido.loja || pedido.unidadeId || pedido.idUnidade || "";
-    const nome = String(valor).trim().toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 
-    if (nome === "2" || nome.includes("unidade 2") || nome.includes("unidade2") || nome.includes("unidade dois") || nome.includes("praia") || nome.includes("continente")) return "Unidade 2";
-    if (nome === "1" || nome.includes("unidade 1") || nome.includes("unidade1") || nome.includes("unidade um") || nome.includes("centro")) return "Unidade 1";
+    const valor =
+        typeof unidade === "string" || typeof unidade === "number"
+            ? unidade
+            : (unidade && unidade.nome) ||
+              pedido.nomeUnidade ||
+              pedido.unidadeSelecionada ||
+              pedido.unidadeNome ||
+              pedido.filial ||
+              pedido.loja ||
+              pedido.unidadeId ||
+              pedido.idUnidade ||
+              "";
+
+    const nome = String(valor)
+        .trim()
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "");
+
+    if (
+        nome === "2" ||
+        nome.includes("unidade 2") ||
+        nome.includes("unidade2") ||
+        nome.includes("unidade dois") ||
+        nome.includes("praia") ||
+        nome.includes("continente")
+    ) {
+        return "Unidade 2";
+    }
+
+    if (
+        nome === "1" ||
+        nome.includes("unidade 1") ||
+        nome.includes("unidade1") ||
+        nome.includes("unidade um") ||
+        nome.includes("centro")
+    ) {
+        return "Unidade 1";
+    }
+
     return "";
 }
 
@@ -98,10 +132,23 @@ function obterNomeStatus(status) {
 ========================================= */
 
 function atualizarContadores() {
-    const pedidosUnidade = pedidos.filter(pedido => obterUnidadePedido(pedido) === unidadeAtual);
-    contadorAguardando.textContent = pedidosUnidade.filter(pedido => pedido.status === "aguardando" || pedido.status === "recebido").length;
-    contadorPreparando.textContent = pedidosUnidade.filter(pedido => pedido.status === "preparando").length;
-    contadorPronto.textContent = pedidosUnidade.filter(pedido => pedido.status === "pronto").length;
+    const pedidosUnidade = pedidos.filter(
+        pedido => obterUnidadePedido(pedido) === unidadeAtual
+    );
+
+    contadorAguardando.textContent = pedidosUnidade.filter(
+        pedido =>
+            pedido.status === "aguardando" ||
+            pedido.status === "recebido"
+    ).length;
+
+    contadorPreparando.textContent = pedidosUnidade.filter(
+        pedido => pedido.status === "preparando"
+    ).length;
+
+    contadorPronto.textContent = pedidosUnidade.filter(
+        pedido => pedido.status === "pronto"
+    ).length;
 }
 
 
@@ -188,7 +235,7 @@ function criarCartaoPedido(pedido) {
 
     cabecalho.append(identificacao, etiqueta);
 
-    // Unidade do pedido.
+    // Mostra a unidade do pedido.
     if (obterUnidadePedido(pedido)) {
         const unidade = document.createElement("p");
         unidade.className = "observacao-item";
@@ -197,7 +244,7 @@ function criarCartaoPedido(pedido) {
         cabecalho.appendChild(unidade);
     }
 
-    // Produtos do pedido.
+    // Lista os produtos do pedido.
     const tituloItens = document.createElement("h3");
     tituloItens.className = "titulo-itens";
     tituloItens.textContent = "Itens do pedido";
@@ -211,7 +258,7 @@ function criarCartaoPedido(pedido) {
         listaItens.appendChild(criarItemPedido(item));
     });
 
-    // Total.
+    // Mostra o valor total do pedido.
     const total = document.createElement("p");
     total.className = "observacao-item";
 
@@ -219,7 +266,7 @@ function criarCartaoPedido(pedido) {
         "Total: " +
         RaizesUtils.formatarMoeda(Number(pedido.total) || 0);
 
-    // Área de ações.
+    // Área de ações do pedido.
     const acoes = document.createElement("div");
     acoes.className = "acoes-pedido";
 
@@ -234,7 +281,11 @@ function criarCartaoPedido(pedido) {
         botaoStatus.textContent = "Marcar como pronto";
 
     } else {
-        botaoStatus.textContent = pedido.status === "retirado" ? "Pedido retirado" : "Pronto para retirada";
+        botaoStatus.textContent =
+            pedido.status === "retirado"
+                ? "Pedido retirado"
+                : "Pronto para retirada";
+
         botaoStatus.disabled = true;
     }
 
@@ -250,6 +301,7 @@ function criarCartaoPedido(pedido) {
         pedido.status === "pronto"
     ) {
         const botaoVoltar = document.createElement("button");
+
         botaoVoltar.type = "button";
         botaoVoltar.className = "botao-secundario";
         botaoVoltar.textContent = "Voltar etapa";
@@ -288,9 +340,20 @@ function mostrarPedidos() {
     atualizarContadores();
 
     const pedidosFiltrados = pedidos.filter(function (pedido) {
-        const mesmaUnidade = obterUnidadePedido(pedido) === unidadeAtual;
-        const mesmoStatus = filtroAtual === "todos" ||
-            (filtroAtual === "aguardando" ? (pedido.status === "aguardando" || pedido.status === "recebido") : pedido.status === filtroAtual);
+        const mesmaUnidade =
+            obterUnidadePedido(pedido) === unidadeAtual;
+
+        const mesmoStatus =
+            filtroAtual === "todos" ||
+            (
+                filtroAtual === "aguardando"
+                    ? (
+                        pedido.status === "aguardando" ||
+                        pedido.status === "recebido"
+                    )
+                    : pedido.status === filtroAtual
+            );
+
         return mesmaUnidade && mesmoStatus;
     });
 
@@ -343,12 +406,14 @@ function avancarStatus(numeroPedido) {
         return;
     }
 
-    if (pedido.status === "aguardando" || pedido.status === "recebido") {
+    if (
+        pedido.status === "aguardando" ||
+        pedido.status === "recebido"
+    ) {
         atualizarStatusPedido(numeroPedido, "preparando");
 
     } else if (pedido.status === "preparando") {
         atualizarStatusPedido(numeroPedido, "pronto");
-
     }
 }
 
@@ -369,9 +434,10 @@ function voltarStatus(numeroPedido) {
     if (pedido.status === "pronto") {
         atualizarStatusPedido(numeroPedido, "preparando");
 
-    } else if (pedido.status === "preparando") {
-        atualizarStatusPedido(numeroPedido, "aguardando");
-    } else if (pedido.status === "recebido") {
+    } else if (
+        pedido.status === "preparando" ||
+        pedido.status === "recebido"
+    ) {
         atualizarStatusPedido(numeroPedido, "aguardando");
     }
 }
@@ -407,11 +473,13 @@ botoesFiltro.forEach(function (botao) {
 
 if (seletorUnidade) {
     seletorUnidade.value = unidadeAtual;
+
     seletorUnidade.addEventListener("change", function () {
         unidadeAtual = seletorUnidade.value;
         mostrarPedidos();
     });
 }
+
 
 /* =========================================
    14. ATUALIZAÇÃO ENTRE ABAS

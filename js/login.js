@@ -109,14 +109,6 @@ formulario.addEventListener("submit", function (evento) {
         return;
     }
 
-    /*
-     * LOGIN DEMONSTRATIVO:
-     * O protótipo não consulta um servidor para validar
-     * o cadastro e a senha.
-     *
-     * Qualquer identificador e senha preenchidos permitem
-     * simular a entrada. A senha não é armazenada.
-     */
 
     const nomeDemonstrativo = identificador.includes("@")
         ? identificador.split("@")[0]
@@ -242,15 +234,6 @@ formularioRecuperacao.addEventListener("submit", function (evento) {
         return;
     }
 
-    /*
-     * SIMULAÇÃO DO PROTÓTIPO:
-     *
-     * Não existe um servidor para localizar a conta
-     * e alterar uma senha real.
-     *
-     * A validação abaixo demonstra o fluxo visual,
-     * mas não modifica credenciais nem armazena a senha.
-     */
 
     mensagemRecuperacao.textContent =
         "Validação concluída! Senha trocada com sucesso." +

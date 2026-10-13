@@ -144,9 +144,7 @@ if (!AuthRaizes.estaLogado()) {
         }
 
 
-        /* -----------------------------------------
-           6.1. GERAR NÚMERO E SENHA
-        ----------------------------------------- */
+        /* GERAR NÚMERO E SENHA*/
 
         let proximoNumero = 2156;
 
@@ -166,9 +164,7 @@ if (!AuthRaizes.estaLogado()) {
         }
 
 
-        /* -----------------------------------------
-           6.2. MONTAR O PEDIDO
-        ----------------------------------------- */
+        /* MONTAR O PEDIDO */
 
         const novoPedido = {
 
@@ -202,9 +198,7 @@ if (!AuthRaizes.estaLogado()) {
         };
 
 
-        /* -----------------------------------------
-           6.3. SALVAR O PEDIDO
-        ----------------------------------------- */
+        /*SALVAR O PEDIDO */
 
         pedidos.push(novoPedido);
 
@@ -217,9 +211,7 @@ if (!AuthRaizes.estaLogado()) {
         }
 
 
-        /* -----------------------------------------
-           6.4. ATUALIZAR O PRÓXIMO NÚMERO
-        ----------------------------------------- */
+        /*ATUALIZAR O PRÓXIMO NÚMERO */
 
         try {
 
@@ -237,9 +229,7 @@ if (!AuthRaizes.estaLogado()) {
         }
 
 
-        /* -----------------------------------------
-           6.5. ATUALIZAR A FIDELIDADE
-        ----------------------------------------- */
+        /* ATUALIZAR A FIDELIDADE */
 
         // Os pontos só são atualizados após a aprovação.
         const saldoAtual = RaizesUtils.obterSaldoPontos();
@@ -255,9 +245,7 @@ if (!AuthRaizes.estaLogado()) {
         RaizesUtils.salvarSaldoPontos(novoSaldo);
 
 
-        /* -----------------------------------------
-           6.6. GUARDAR O PEDIDO CONFIRMADO
-        ----------------------------------------- */
+        /* GUARDAR O PEDIDO CONFIRMADO */
 
         sessionStorage.setItem(
             "pedidoConfirmado",
@@ -265,9 +253,7 @@ if (!AuthRaizes.estaLogado()) {
         );
 
 
-        /* -----------------------------------------
-           6.7. ESVAZIAR O CARRINHO
-        ----------------------------------------- */
+        /* ESVAZIAR O CARRINHO */
 
         // O carrinho só é esvaziado após a aprovação.
         localStorage.setItem("carrinhoRaizes", "[]");
